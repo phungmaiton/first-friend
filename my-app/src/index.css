@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,111 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.topnav {
+  background-color: #FFFAF7;
+  /* padding: 0 15% 0 15%; */
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 110px;
+  
+}
+
+.topnav a {
+  color: #0e0e0e;
+  text-align: center;
+  padding: 0 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 50px;
+  height: 110px;      
+  line-height: 110px;
+}
+
+#logo {
+  display: inline-block;
+  vertical-align: top;
+  height: 100px;
+  margin-right: 50px;
+  margin-top: 5px; 
+}
+
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: #000000;
+  font-weight: 600;
+}
+
+.topnav-right {
+  float: right;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  padding: 60px;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #D8766D;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 12x;
+  text-transform: uppercase;
+  padding: 7px 20px 7px 20px;
+  margin-top: 1rem
+}
+
+button:hover {
+  background-color: #778AC6;
 }

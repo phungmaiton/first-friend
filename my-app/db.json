@@ -1,0 +1,45 @@
+{
+    "grammar":[
+        {
+            "id": 1,
+            "name": "Korean Sentence Structure",
+            "description": "The Korean sentence typically consists of the : Subject - Object - Predicate(verb) Or Subject - Adjective",
+            "image": "https://www.topikguide.com/wp-content/uploads/2022/02/TG-website-86.jpg",
+            "link": "https://www.topikguide.com/korean-sentence-structure/",
+            "likes": 5
+        },
+        {
+            "id": 2,
+            "name": "Conjugation of Korean Verbs and Adjectives",
+            "description": "One of the characteristics of Korean verbs and adjectives is that they both are conjugated according to tense, speech level, passive and causative forms, and speech styles.",
+            "image": "https://www.topikguide.com/wp-content/uploads/2022/02/TG-website-87.jpg",
+            "link": "https://www.topikguide.com/korean-conjugation/",
+            "likes": 10
+        },
+        {
+            "id": 3,
+            "name": "10 Korean grammar patterns – Discovery and result",
+            "description": "Following is the list of all the Korean grammar patterns that are used to describe a speaker's realisation or surprise about something in the first clause and the result or effect in the latter half of the sentence.",
+            "image": "https://www.topikguide.com/wp-content/uploads/2022/01/TG-website-83.jpg",
+            "link": "https://www.topikguide.com/korean-grammar-discovery-and-result/",
+            "likes": 3
+        },
+        {
+            "id": 4,
+            "name": "5 Most Common Korean Particles and How to Use Them",
+            "description": "Today we'll be looking at the top 5 most common and important Korean grammar particles. These may consist of anything from pre/postpositions, particles to use with nouns, verbs, adverbs and adjectives etc. ",
+            "image": "https://www.topikguide.com/wp-content/uploads/2022/05/TG-website-2022-05-24T193128.984.jpg",
+            "link":"https://www.topikguide.com/5-most-common-korean-particles/",
+            "likes": 2
+        },
+        {
+            "id": 5,
+            "name": "Korean Grammar V+고 나서 – After (doing something)",
+            "description": "Today we'll be looking at the usage of 'Verb ~고 나서' Korean grammar pattern with some examples.",
+            "image": "https://www.topikguide.com/wp-content/uploads/2022/05/TG-website-2022-05-02T143409.915.jpg",
+            "link":"https://www.topikguide.com/korean-grammar-verb-%ea%b3%a0-%eb%82%98%eb%8b%a4/",
+            "likes": 4
+        }
+
+    ]
+}
