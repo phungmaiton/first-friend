@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import GrammarItem from "./GrammarItem";
 import Banner from "./Banner";
 import ReactPaginate from "react-paginate";
+import Pagination from "@mui/material/Pagination";
 
 function GrammarPage() {
   const [grammarArray, setGrammarArray] = useState([]);
@@ -38,10 +39,12 @@ function GrammarPage() {
               key={grammar.id}
               title={grammar.name}
               image={grammar.image}
-              description={grammar.description.substring(0, 100)}
+              description={grammar.description}
             />
           ))}
         </div>
+
+        <Pagination count={6} variant="outlined" />
         <ReactPaginate
           onPageChange={paginate}
           pageCount={Math.ceil(grammarArray.length / postsPerPage)}
