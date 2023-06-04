@@ -90,15 +90,14 @@
     ],
 
     "videos": [
-            {
-            "motivational": [
-                {
+             {
                 "id": 1,
                 "image": "",
                 "name": "My Korean language journey", 
                 "description": "In this video I talk about how I learned Korean and what my struggles have been while learning the language. I speak Korean with my husband and at work, but that doesn't mean that it's always easy.", 
                 "videoUrl": "https://youtu.be/jaWiplHX6MQ", 
-                "likes": 1
+                "likes": 1, 
+                "category": "motivation"
             },
             {
                 "id": 2,
@@ -106,7 +105,8 @@
                 "name": "how to get motivated to study korean (and actually enjoy it!)", 
                 "description": "Tips and Skills to help you get and stay motivated while learning Korean", 
                 "videoUrl": "https://youtu.be/4LHkMR7vsXk", 
-                "likes": 1
+                "likes": 1, 
+                "category": "motivation"
             },
             {
                 "id": 3,
@@ -114,7 +114,8 @@
                 "name": "My Korean Language journey + Tips!", 
                 "description": "A video about my Korean learning journey along with some tips!", 
                 "videoUrl": "https://youtu.be/VIHNb0wLnp0", 
-                "likes": 1
+                "likes": 1, 
+                "category": "motivation"
             },
             {
                 "id": 4,
@@ -122,7 +123,8 @@
                 "name": "Update on my Korean...2 years later", 
                 "description": "In this video, I react to my first EVER video speaking Korean on my channel, and recreate that 2 years later. ", 
                 "videoUrl": "https://youtu.be/v8jKLjZrAzM", 
-                "likes": 1
+                "likes": 1, 
+                "category": "motivation"
             },
             {
                 "id": 5,
@@ -130,15 +132,11 @@
                 "name": "I Tried To Learn Korean In 60 Days", 
                 "description": "I Tried To Learn Korean In 60 Days", 
                 "videoUrl": "https://youtu.be/abkPv-9amK4", 
-                "likes": 1
+                "likes": 1, 
+                "category": "motivation"
             }
-            ],
-            "entertaining": [
-
-            ]
-        }
     ],
-
+    
     "helpfulLinks":[
         {
             "id": 1,
