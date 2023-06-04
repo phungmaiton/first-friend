@@ -41,5 +41,52 @@
             "likes": 4
         }
 
+    ],
+
+    "books": [
+        {
+            "id": 1,
+            "image": "https://m.media-amazon.com/images/I/61ocphfphWL.jpg",
+            "name": "Talk To Me In Korean Level 1",
+            "description": "Learn Korean More Effectively with Our Core Grammar Lessons! From saying the basic greetings, to counting numbers, and to having simple yet natural conversations in Korean, you can learn the basics of the Korean language with this textbook.",
+            "purchaseUrl": "https://talktomeinkorean.com/product/gr1/",
+            "likes": 13
+        }, {
+            "id": 2,
+            "image": "https://m.media-amazon.com/images/I/71T1dwKi5DL._AC_UF1000,1000_QL80_.jpg", 
+            "name": "Korean Made Simple", 
+            "description": "Korean Made Simple is a book for anyone who wishes to begin learning the Korean language. No matter your age, you can learn how to read, write, speak and understand Korean. Learn the Korean writing system, Korean culture, and even history. Learn over 1,000 vocabulary words and phrases through 20 in-depth and fun lessons, filled with plenty of examples. Additionally, practice sections with answer keys are built into every chapter. This book also contains additional advanced level notes for more skilled Korean speakers looking for a review of basic grammar and concepts, including a full appendix covering sound change rules. Start your exciting journey into the Korean language today. Let's learn Korean!",
+            "purchaseUrl": "https://gobillykorean.com/korean-made-simple/",
+            "likes": 11
+        }, {
+            "id": 3, 
+            "image": "https://m.media-amazon.com/images/I/51pP0Onq6vL.jpg", 
+            "name": "Read and Speak Korean for Beginners", 
+            "description": "Learning a new language can be especially challenging when the language uses a non-Roman script. Read and Speak Korean for Beginners, 3rd Edition overcomes this obstacle by providing an accessible, entertaining program to reinforce vocabulary and help you create basic structures. Each of the book’s eight topics was designed to help you develop your communication skills in key areas of daily life, such as introducing yourself, asking for directions, talking about your family and your country, and describing people, places, and objects.",
+            "purchaseUrl": "https://www.amazon.com/Read-Speak-Korean-Beginners-Third/dp/1260031039/ref=sr_1_1?keywords=read+and+speak+korean+for+beginners&qid=1685748777&s=books&sprefix=read+and+speak+korean%2Cstripbooks%2C128&sr=1-1",
+            "likes": 8
+        }, {
+            "id": 4,  
+            "image": "https://m.media-amazon.com/images/I/61gsuv7239L._AC_UF1000,1000_QL80_.jpg", 
+            "name": "Let's Speak Korean", 
+            "description": "Want to learn to speak Korean quickly and easily? Let's Speak Korean is the perfect solution! Whether you are a K-Pop/K-Drama fanatic or just someone trying to pick up some useful expressions before going on a trip to Korea, this book surely will be a great resource! This book contains over 1,400 daily expressions from 21 different topics and situations, and is designed in a way that anyone with no knowledge in Korean can learn and use right away, through simply listening and repeating the expressions.", 
+            "purchaseUrl": "https://www.amazon.com/Lets-Speak-Korean-Expressions-Pronunciation/dp/B07GW7QZ9W/ref=sr_1_1?crid=SUYM4X7XD0EV&keywords=let%27s+speak+korean&qid=1685748939&s=books&sprefix=let%27s+speak+korea%2Cstripbooks%2C117&sr=1-1",
+            "likes": 9
+        }, {
+            "id": 5,   
+            "image": "https://m.media-amazon.com/images/I/61eYCDAL8mS._AC_UF1000,1000_QL80_.jpg",  
+            "name": "Learn Korean",
+            "description": "This Korean book is suitable for adults and kids, from total beginners to those looking to improve their writing Hangul writing skills. Our self-study exercises and how-to-write style practice pages will simplify the whole process for elementary and intermediate level Korean. Your tutor, Jennie Lee, will teach you everything you need to know about the Hangul script, with just enough detail to get started quickly! Features: a comprehensive overview of the pronunciation rules, a large section of beginner vocabulary for practice, a guide to reading and writing numbers in Korean, understanding native handwriting, and more!",
+            "purchaseUrl": "https://www.barnesandnoble.com/w/learn-korean-the-language-workbook-for-beginners-jennie-lee/1139047291",
+            "likes": 6
+        }, {
+            "id": 6,    
+            "image": "https://m.media-amazon.com/images/I/61xWbdNs7ZL._AC_UF1000,1000_QL80_.jpg",  
+            "name": "Korean Grammar for Beginners",
+            "description": "A tried-and-true grammar-based approach that will have you speaking Korean confidently in no time, even if you are an absolute beginner. This book is designed to address the key areas where students frequently struggle. It provides a step-by-step learning method that anyone can follow and will take your Korean to new heights!",
+            "purchaseUrl": "https://www.barnesandnoble.com/w/korean-grammar-for-beginners-fluent-in-korean/1143322029",
+            "likes": 6
+        }
     ]
+
 }
