@@ -1,10 +1,17 @@
 import React from "react";
-import "../App.css";
-import NavBar from "./NavBar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import GrammarPage from "./GrammarPage";
+
 function App() {
   return (
-    <div className="App">
-      <NavBar />
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/grammar" element={<GrammarPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

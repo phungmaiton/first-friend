@@ -1,14 +1,18 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import "../App.css";
 function NavBar() {
   return (
-    <nav class="topnav">
-      <div class="container m-auto px-2">
+    <nav className="topnav">
+      <div className="container m-auto px-2">
         <img id="logo" src="./main-logo.png" alt="logo" />
-        <a href="">HOME</a>
-        <a href="">BOOKS</a>
-        <a href="">GRAMMAR</a>
-        <a href="">VIDEO</a>
-        <a href="">OTHER RESOURCES</a>
+        <div className="topnav-right">
+          <NavLink to="/">HOME</NavLink>
+          <NavLink to="/books">BOOKS</NavLink>
+          <NavLink to="/grammar">GRAMMAR</NavLink>
+          <NavLink to="/videos">VIDEOS</NavLink>
+          <NavLink to="/other">OTHER RESOURCES</NavLink>
+        </div>
       </div>
     </nav>
   );
