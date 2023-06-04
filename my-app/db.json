@@ -87,6 +87,99 @@
             "purchaseUrl": "https://www.barnesandnoble.com/w/korean-grammar-for-beginners-fluent-in-korean/1143322029",
             "likes": 6
         }
-    ]
+    ],
 
+    "videos": [
+            {
+            "motivational": [
+                {
+                "id": 1,
+                "image": "",
+                "name": "My Korean language journey", 
+                "description": "In this video I talk about how I learned Korean and what my struggles have been while learning the language. I speak Korean with my husband and at work, but that doesn't mean that it's always easy.", 
+                "videoUrl": "https://youtu.be/jaWiplHX6MQ", 
+                "likes": 1
+            },
+            {
+                "id": 2,
+                "image": "",
+                "name": "how to get motivated to study korean (and actually enjoy it!)", 
+                "description": "Tips and Skills to help you get and stay motivated while learning Korean", 
+                "videoUrl": "https://youtu.be/4LHkMR7vsXk", 
+                "likes": 1
+            },
+            {
+                "id": 3,
+                "image": "",
+                "name": "My Korean Language journey + Tips!", 
+                "description": "A video about my Korean learning journey along with some tips!", 
+                "videoUrl": "https://youtu.be/VIHNb0wLnp0", 
+                "likes": 1
+            },
+            {
+                "id": 4,
+                "image": "",
+                "name": "Update on my Korean...2 years later", 
+                "description": "In this video, I react to my first EVER video speaking Korean on my channel, and recreate that 2 years later. ", 
+                "videoUrl": "https://youtu.be/v8jKLjZrAzM", 
+                "likes": 1
+            },
+            {
+                "id": 5,
+                "image": "", 
+                "name": "I Tried To Learn Korean In 60 Days", 
+                "description": "I Tried To Learn Korean In 60 Days", 
+                "videoUrl": "https://youtu.be/abkPv-9amK4", 
+                "likes": 1
+            }
+            ],
+            "entertaining": [
+
+            ]
+        }
+    ],
+
+    "helpfulLinks":[
+        {
+            "id": 1,
+            "name": "How to study Korean",
+            "description": "The purpose of this website is to provide Korean learners with a one-stop resource for learning Korean. We strive to provide the most detailed, accurate and clear explanations at every step of the way – from learning how to read all the way to advanced grammar. Our lessons will always be free and are chuck-full of content.",
+            "image": "https://www.howtostudykorean.com/wp-content/uploads/2018/01/FinalBanner2015.png",
+            "link": "https://www.howtostudykorean.com/",
+            "likes": 1
+        },
+        {
+            "id": 2,
+            "name": "Talk To Me In Korean",
+            "description": "Learn Korean with our systematic online curriculum, books, and ebooks!",
+            "image": "https://cdn.talktomeinkorean.com/wp-content/uploads/2021/10/15144451/logo402x-1.png",
+            "link": "https://talktomeinkorean.com/",
+            "likes": 1
+        },
+        {
+            "id": 3,
+            "name": "111 Core Korean words",
+            "description": "Basic Korean Words You Need to Learn First",
+            "image": "https://www.fluentin3months.com/wp-content/uploads/2022/09/korean-words.jpg",
+            "link": "https://www.fluentin3months.com/korean-words/",
+            "likes": 1
+        },
+        {
+            "id": 4,
+            "name": "HelloTalk",
+            "description": "Talk to the World! Learn a language for free by chatting with native speakers around the world!",
+            "image": "https://ali-global-cdn.hellotalk8.com/wp-content/themes/salient-child/images/hello-talk.svg",
+            "link": "https://www.hellotalk.com/?lang=en",
+            "likes": 1
+        },
+        {
+            "id": 5,
+            "name": "Koreantopik: Self Study Korean",
+            "description": " This blog was created with the purpose to build an online korean grammar library as well as to create a complete course for English-speaking Korean learners to study Korean themselves from beginning to upper-intermediate level.",
+            "image": "https://4.bp.blogspot.com/-1gRzzLYr5ps/WtRa4VZM9nI/AAAAAAAAEr4/8PgzXt5I45U_f4yE8k638a2me9cG6L36wCK4BGAYYCw/s1600/Korean%2BTopik.jpg",
+            "link": "https://www.koreantopik.com/",
+            "likes": 1
+        }
+
+    ]
 }
