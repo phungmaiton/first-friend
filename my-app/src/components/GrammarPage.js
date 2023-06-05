@@ -42,6 +42,7 @@ function GrammarPage() {
               image={grammar.image}
               description={grammar.description}
               link={grammar.link}
+              likes={grammar.likes}
             />
           ))}
         </div>

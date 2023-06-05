@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 
-function GrammarItem({ image, title, description, link }) {
+function GrammarItem({ image, title, description, link, likes }) {
   const [showFullDescription, setShowFullDescription] = useState(false);
   function handleDescClick() {
     setShowFullDescription((showFullDescription) => !showFullDescription);
@@ -17,8 +17,17 @@ function GrammarItem({ image, title, description, link }) {
     <div>
       <Card sx={{ maxWidth: 370, minHeight: 410, marginBottom: "20px" }}>
         <CardMedia sx={{ height: 200 }} image={image} title={title} />
-        <CardContent sx={{ minHeight: 150 }}>
-          <Typography gutterBottom variant="h5" component="div">
+        <CardContent sx={{ minHeight: 180 }}>
+          <Typography variant="body2" color="text.secondary" textAlign="right">
+            Likes: {likes}
+          </Typography>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            lineHeight="1.2em"
+            fontSize="17pt"
+          >
             {title}
           </Typography>
           <Typography
@@ -26,6 +35,7 @@ function GrammarItem({ image, title, description, link }) {
             style={{ cursor: "pointer" }}
             variant="body2"
             color="text.secondary"
+            sx={{ minHeight: 10 }}
           >
             {showFullDescription
               ? description
@@ -34,6 +44,7 @@ function GrammarItem({ image, title, description, link }) {
         </CardContent>
         <CardActions>
           <Button
+            className="Button"
             style={{ color: "#D8766D" }}
             href={link}
             target="_blank"
