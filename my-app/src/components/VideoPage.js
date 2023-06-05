@@ -31,6 +31,24 @@ function VideoPage() {
     indexOfLastPost
   );
 
+  const entertainmentVideos = videoArray.filter(
+    (video) => video.category === "entertainment"
+  );
+
+  const currentEntertainmentVideos = entertainmentVideos.slice(
+    indexOfFirstPost,
+    indexOfLastPost
+  );
+
+  const motivationVideos = videoArray.filter(
+    (video) => video.category === "motivation"
+  );
+  
+  const currentMotivationVideos = motivationVideos.slice(
+    indexOfFirstPost,
+    indexOfLastPost
+  );
+
   return (
     <div>
       <NavBar />
@@ -46,6 +64,24 @@ function VideoPage() {
       <Pagination
         paginate={paginate}
         array={listeningVideos}
+        postsPerPage={postsPerPage}
+      />
+      <VideoSection
+        sectionTitle="Motivational Videos"
+        filteredArray={currentMotivationVideos}
+      />
+      <Pagination
+        paginate={paginate}
+        array={motivationVideos}
+        postsPerPage={postsPerPage}
+      />
+      <VideoSection
+        sectionTitle="Entertainment Videos"
+        filteredArray={currentEntertainmentVideos}
+      />
+      <Pagination
+        paginate={paginate}
+        array={entertainmentVideos}
         postsPerPage={postsPerPage}
       />
       <VideoForm array={videoArray} setArray={setVideoArray} />

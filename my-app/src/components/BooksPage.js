@@ -12,7 +12,7 @@ function BooksPage() {
       .then((resp) => resp.json())
       .then((books) => setBooksArray(books));
   }, []);
-  
+
   return (
     <div>
       <NavBar />
