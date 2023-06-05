@@ -76,7 +76,7 @@ code {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.65);
   padding: 60px;
   text-align: center;
   color: white;
@@ -145,4 +145,4 @@ button:hover {
 
 .pagination a:hover:not(.active) {
   background-color: #778AC6;
-color: white;}
+  color: white;}
