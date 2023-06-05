@@ -31,17 +31,23 @@ function GrammarForm({ array, setArray }) {
       likes: 0,
     };
 
-    fetch("http://localhost:3000/grammar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
+    const resourceExists = array.some((item) => item.link === formData.link);
 
-      body: JSON.stringify(newGrammar),
-    })
-      .then((resp) => resp.json())
-      .then((newGrammar) => setArray([...array, newGrammar]));
+    if (resourceExists) {
+      alert("This resource already exists!");
+    } else {
+      fetch("http://localhost:3000/grammar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+
+        body: JSON.stringify(newGrammar),
+      })
+        .then((resp) => resp.json())
+        .then((newGrammar) => setArray([...array, newGrammar]));
+    }
 
     setFormData(initialFormValues);
   };

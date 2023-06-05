@@ -5,7 +5,9 @@ function NavBar() {
   return (
     <nav className="topnav">
       <div className="container m-auto px-2">
-        <img id="logo" src="./main-logo.png" alt="logo" />
+        <NavLink to="/">
+          <img id="logo" src="./main-logo.png" alt="logo" />
+        </NavLink>
         <div className="topnav-right">
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/books">BOOKS</NavLink>
