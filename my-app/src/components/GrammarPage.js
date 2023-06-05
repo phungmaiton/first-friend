@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 import { useState, useEffect } from "react";
 import GrammarItem from "./GrammarItem";
 import Banner from "./Banner";
-import ReactPaginate from "react-paginate";
+import Pagination from "./Pagination";
 
 function GrammarPage() {
   const [grammarArray, setGrammarArray] = useState([]);
@@ -43,17 +43,10 @@ function GrammarPage() {
           ))}
         </div>
 
-        <ReactPaginate
-          className="pagination"
-          onPageChange={paginate}
-          pageCount={Math.ceil(grammarArray.length / postsPerPage)}
-          previousLabel={"≪"}
-          nextLabel={"≫"}
-          containerClassName={"pagination"}
-          pageLinkClassName={"page-number"}
-          previousLinkClassName={"page-number"}
-          nextLinkClassName={"page-number"}
-          activeLinkClassName={"active"}
+        <Pagination
+          paginate={paginate}
+          array={grammarArray}
+          postsPerPage={postsPerPage}
         />
       </div>
     </div>
