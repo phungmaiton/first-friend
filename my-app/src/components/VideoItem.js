@@ -9,7 +9,7 @@ import { useState } from "react";
 function VideoItem({ name, videoUrl, likes }) {
   return (
     <div>
-      <Card sx={{ maxWidth: 370, marginBottom: "20px" }}>
+      <Card sx={{ maxWidth: 370 }}>
         <CardMedia>
           <iframe
             width="370"
@@ -20,7 +20,7 @@ function VideoItem({ name, videoUrl, likes }) {
             title={name}
           />
         </CardMedia>
-        <CardContent sx={{ minHeight: 150 }}>
+        <CardContent sx={{ minHeight: 100 }}>
           <Typography gutterBottom variant="h6" component="div">
             {name}
           </Typography>

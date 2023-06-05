@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import GrammarItem from "./GrammarItem";
 import Banner from "./Banner";
 import Pagination from "./Pagination";
+import GrammarForm from "./GrammarForm";
 
 function GrammarPage() {
   const [grammarArray, setGrammarArray] = useState([]);
@@ -31,7 +32,8 @@ function GrammarPage() {
         subTitle="Learn Some Grammar"
         background="https://a.cdn-hotels.com/gdcs/production125/d653/a01517ea-0ec0-4639-b862-33922c62f04a.jpg"
       />
-      <div className="container m-auto px-2 mt-10 mb-10">
+
+      <div className="container m-auto px-2 mt-20 mb-20">
         <div className="grid grid-cols-3 gap-3">
           {currentPosts.map((grammar) => (
             <GrammarItem
@@ -39,6 +41,7 @@ function GrammarPage() {
               title={grammar.name}
               image={grammar.image}
               description={grammar.description}
+              link={grammar.link}
             />
           ))}
         </div>
@@ -49,6 +52,7 @@ function GrammarPage() {
           postsPerPage={postsPerPage}
         />
       </div>
+      <GrammarForm array={grammarArray} setArray={setGrammarArray} />
     </div>
   );
 }

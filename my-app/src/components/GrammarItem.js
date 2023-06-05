@@ -15,7 +15,7 @@ function GrammarItem({ image, title, description, link }) {
 
   return (
     <div>
-      <Card sx={{ maxWidth: 370, minHeight: 400, marginBottom: "20px" }}>
+      <Card sx={{ maxWidth: 370, minHeight: 410, marginBottom: "20px" }}>
         <CardMedia sx={{ height: 200 }} image={image} title={title} />
         <CardContent sx={{ minHeight: 150 }}>
           <Typography gutterBottom variant="h5" component="div">
@@ -33,7 +33,14 @@ function GrammarItem({ image, title, description, link }) {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button
+            style={{ color: "#D8766D" }}
+            href={link}
+            target="_blank"
+            size="small"
+          >
+            Learn More
+          </Button>
         </CardActions>
       </Card>
     </div>
