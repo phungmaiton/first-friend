@@ -5,19 +5,14 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useState } from "react";
 
 function GrammarItem({ image, title, description, link }) {
-  // const itemClass = [
-  //   "flex",
-  //   "justify-center",
-  //   "items-center",
-  //   "bg-white",
-  //   "shadow-lg",
-  //   "hover:shadow-xl",
-  //   "p-5",
-  //   "text-gray",
-  //   "cursor-pointer",
-  // ];
+  const [showFullDescription, setShowFullDescription] = useState(false);
+  function handleDescClick() {
+    setShowFullDescription((showFullDescription) => !showFullDescription);
+  }
+
   return (
     <div>
       <Card sx={{ maxWidth: 370, minHeight: 400, marginBottom: "20px" }}>
@@ -26,8 +21,15 @@ function GrammarItem({ image, title, description, link }) {
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {description}
+          <Typography
+            onClick={handleDescClick}
+            style={{ cursor: "pointer" }}
+            variant="body2"
+            color="text.secondary"
+          >
+            {showFullDescription
+              ? description
+              : description.substring(0, 100) + "..."}
           </Typography>
         </CardContent>
         <CardActions>

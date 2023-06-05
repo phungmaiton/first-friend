@@ -31,22 +31,24 @@ function GrammarPage() {
         subTitle="Learn Some Grammar"
         background="https://a.cdn-hotels.com/gdcs/production125/d653/a01517ea-0ec0-4639-b862-33922c62f04a.jpg"
       />
-      <div className="container m-auto px-2 mt-10">
+      <div className="container m-auto px-2 mt-10 mb-10">
         <div className="grid grid-cols-3 gap-3">
-          {grammarArray.map((grammar) => (
+          {currentPosts.map((grammar) => (
             <GrammarItem
               key={grammar.id}
               title={grammar.name}
               image={grammar.image}
-              description={grammar.description.substring(0, 100)}
+              description={grammar.description}
             />
           ))}
         </div>
+
         <ReactPaginate
+          className="pagination"
           onPageChange={paginate}
           pageCount={Math.ceil(grammarArray.length / postsPerPage)}
-          previousLabel={"Prev"}
-          nextLabel={"Next"}
+          previousLabel={"≪"}
+          nextLabel={"≫"}
           containerClassName={"pagination"}
           pageLinkClassName={"page-number"}
           previousLinkClassName={"page-number"}
