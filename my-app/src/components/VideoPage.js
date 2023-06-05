@@ -57,6 +57,7 @@ function VideoPage() {
         subTitle="Watch Some Videos"
         background="https://www.worldatlas.com/r/w768/upload/7f/2c/f0/seoul.jpg"
       />
+      <div className="container m-auto px-2 mt-20 mb-20">
       <VideoSection
         sectionTitle="Listening Videos"
         filteredArray={currentListeningVideos}
@@ -84,6 +85,7 @@ function VideoPage() {
         array={entertainmentVideos}
         postsPerPage={postsPerPage}
       />
+      </div>
       <VideoForm array={videoArray} setArray={setVideoArray} />
     </div>
   );
