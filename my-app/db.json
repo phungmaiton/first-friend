@@ -129,6 +129,31 @@
                 "videoUrl": "https://youtu.be/abkPv-9amK4", 
                 "likes": 1, 
                 "category": "motivation"
+            },
+
+            {
+                "id": 6,
+                "name": "(CC) 【중급말하기】 01.성격(Personality) 성격이 급해 가지고 실수를 많이 해요", 
+                "description": "여러분은 어떤 성격이에요? 성격에 대한 대화를 같이 들어봐요!", 
+                "videoUrl": "https://www.youtube.com/embed/gG4uudNP9jw", 
+                "likes": 234, 
+                "category": "listening"
+            },
+            {
+                "id": 7,
+                "name": "(Kr/Eng:CC)(자막) 【한국어 말하기】 주말에 뭐 해요? Real Korean Speaking", 
+                "description": "여러분은, 휴일을 어떻게 보내시나요? 같이 이야기해 봐요!", 
+                "videoUrl": "https://www.youtube.com/embed/0CZRKFlQekU", 
+                "likes": 242, 
+                "category": "listening"
+            },
+            {
+                "id": 8,
+                "name": "Korean Expression and tip for travel in Korea 👄 Speaking in Korean", 
+                "description": "오늘은 한국을 여행할 때 사용할 수 있는 한국어 표현과 한국 여행 팁을 소개합니다.", 
+                "videoUrl": "https://www.youtube.com/embed/bMDAIfTKTiE", 
+                "likes": 340, 
+                "category": "listening"
             }
     ],
     
