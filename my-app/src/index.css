@@ -9,6 +9,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 code {
@@ -146,3 +151,20 @@ button:hover {
 .pagination a:hover:not(.active) {
   background-color: #778AC6;
 color: white;}
+
+/* Form Input */
+input {
+  padding: 5px 5px 5px 5px;
+  width: 220px;
+  border: solid 2px;
+  border-color:	rgb(220,220,220);
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+/* Form Section */
+
+.form-section {
+  background-color: #FFFAF7;
+  padding: 20px; 
+}
