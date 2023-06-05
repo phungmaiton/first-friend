@@ -154,6 +154,30 @@
                 "videoUrl": "https://www.youtube.com/embed/bMDAIfTKTiE", 
                 "likes": 340, 
                 "category": "listening"
+            },
+            {
+                "id": 9,
+                "name": "Practising Korean with Random People Online...!?😱", 
+                "description": "Today Ollie tries his Jolly best to practise his Korean with some random people online...", 
+                "videoUrl": "https://www.youtube.com/embed/hBvDFOB3DKc", 
+                "likes": 5, 
+                "category": "entertainment"
+            },
+            {
+                "id": 10,
+                "name": "Learn Korean with Kdrama in 5 minutes", 
+                "description": "Learn Korean with Kdrama in 5 minutes (Crash landing on you E03)", 
+                "videoUrl": "https://www.youtube.com/embed/qBVNzL32byE", 
+                "likes": 4, 
+                "category": "entertainment"
+            },
+            {
+                "id": 11,
+                "name": "Learn Korean with a comedy show 'Comedy Big League(코미디빅리그)' | Learn Korean with a culture", 
+                "description": "안녕하세요. 여러분 가둘 입니다. Have you guys watched a 'Korean Comedy show'?? Why don't you see if it's also funny for you too? You can learn Korean words while watching too~!", 
+                "videoUrl": "https://www.youtube.com/embed/Uhd9LR8INPQ", 
+                "likes": 2, 
+                "category": "entertainment"
             }
     ],
     
