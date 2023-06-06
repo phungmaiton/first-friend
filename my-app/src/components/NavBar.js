@@ -8,7 +8,11 @@ function NavBar() {
         <NavLink to="/">
           <img id="logo" src="./main-logo.png" alt="logo" />
         </NavLink>
-        <div className="topnav-right">
+        {/* <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label> */}
+        <div className="menu">
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/books">BOOKS</NavLink>
           <NavLink to="/grammar">GRAMMAR</NavLink>
