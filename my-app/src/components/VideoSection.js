@@ -9,7 +9,9 @@ function VideoSection({
 }) {
   return (
     <div className="container m-auto px-2 mt-10 mb-10">
-      <h2>{sectionTitle}</h2>
+      <h2 className="video-divider">
+        <span className="video-divider-textbox">{sectionTitle}</span>
+        </h2>
       <div className="grid grid-cols-3 gap-3">
         {filteredArray.map((video) => (
           <VideoItem
