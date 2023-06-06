@@ -1,24 +1,17 @@
 import React from "react";
 import NavBar from "./NavBar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import GrammarItem from "./GrammarItem";
 import Banner from "./Banner";
 import Pagination from "./Pagination";
 import GrammarForm from "./GrammarForm";
 
-function GrammarPage() {
-  const [grammarArray, setGrammarArray] = useState([]);
+function GrammarPage({ grammarArray, setGrammarArray }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = grammarArray.slice(indexOfFirstPost, indexOfLastPost);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/grammar")
-      .then((resp) => resp.json())
-      .then((grammar) => setGrammarArray(grammar));
-  }, []);
 
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
