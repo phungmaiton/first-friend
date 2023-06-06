@@ -55,7 +55,7 @@ function BookForm({ array, setArray }) {
   return (
     <div className="form-section">
       <div className="form container m-auto px-2 mt-10 mb-10" id="contribute">
-        <h2>Add a Book</h2>
+        <h2>Add Books</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -80,7 +80,7 @@ function BookForm({ array, setArray }) {
           />
           <input
             type="text"
-            name="link"
+            name="purchaseUrl"
             placeholder="Purchase Link"
             value={formData.purchaseUrl}
             onChange={handleInputChange}
