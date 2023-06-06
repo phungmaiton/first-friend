@@ -1,9 +1,6 @@
 import React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 
@@ -51,16 +48,13 @@ function GrammarItem({
     <div>
       <Card sx={{ maxWidth: 370, minHeight: 410, marginBottom: "20px" }}>
         <CardMedia sx={{ height: 200 }} image={image} title={title} />
-        {/* <CardContent sx={{ minHeight: 180 }}> */}
         <div className="card-content">
-          {/* <Typography variant="body2" color="text.secondary" textAlign="right"> */}
           <div className="likes">
             <a className="like-button" onClick={handleClick}>
               {isLiked ? "♥" : "♡"}
             </a>
             Likes: {likes}
           </div>
-          {/* </Typography> */}
           <Typography
             gutterBottom
             variant="h5"
@@ -82,13 +76,11 @@ function GrammarItem({
               : description.substring(0, 120) + "..."}
           </Typography>
         </div>
-        {/* </CardContent> */}
         <div className="card-action">
           <a href={link} target="_blank">
             <button className="learn-more">Learn More</button>
           </a>
         </div>
-        {/* </CardActions> */}
       </Card>
     </div>
   );
