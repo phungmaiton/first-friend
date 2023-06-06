@@ -24,6 +24,29 @@ body {
    }
 }
 
+.page-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+.page-exit {
+  opacity: 0;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -174,6 +197,14 @@ input {
   margin-right: 20px;
 }
 
+select {
+  padding: 5px 5px 5px 5px;
+  width: 220px;
+  border: solid 2px;
+  border-color:	rgb(220,220,220);
+  border-radius: 5px;
+  margin-right: 20px;
+}
 /* Form Section */
 
 .form-section {

@@ -1,12 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
-function GrammarForm({ array, setArray }) {
+function VideoForm({ array, setArray }) {
   const initialFormValues = {
     name: "",
-    description: "",
-    image: "",
-    link: "",
+    videoUrl: "",
+    category: "select",
   };
 
   const [formData, setFormData] = useState(initialFormValues);
@@ -23,30 +22,31 @@ function GrammarForm({ array, setArray }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newGrammar = {
+    const newVideo = {
       name: formData.name,
-      description: formData.description,
-      image: formData.image,
-      link: formData.link,
+      videoUrl: formData.videoUrl,
       likes: 0,
+      category: formData.category,
     };
 
-    const resourceExists = array.some((item) => item.link === formData.link);
+    const resourceExists = array.some(
+      (item) => item.link === formData.videoUrl
+    );
 
     if (resourceExists) {
-      alert("This resource already exists!");
+      alert("This video already exists!");
     } else {
-      fetch("http://localhost:3000/grammar", {
+      fetch("http://localhost:3000/videos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
 
-        body: JSON.stringify(newGrammar),
+        body: JSON.stringify(newVideo),
       })
         .then((resp) => resp.json())
-        .then((newGrammar) => setArray([newGrammar, ...array]));
+        .then((newVideo) => setArray([newVideo, ...array]));
     }
 
     setFormData(initialFormValues);
@@ -55,7 +55,7 @@ function GrammarForm({ array, setArray }) {
   return (
     <div className="form-section">
       <div className="form container m-auto px-2 mt-10 mb-10" id="contribute">
-        <h2>Add Grammar Resource</h2>
+        <h2>Add Videos</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -66,25 +66,23 @@ function GrammarForm({ array, setArray }) {
           />
           <input
             type="text"
-            name="description"
-            placeholder="Description"
-            value={formData.description}
+            name="videoUrl"
+            placeholder="Embed URL"
+            value={formData.videoUrl}
             onChange={handleInputChange}
           />
-          <input
-            type="text"
-            name="image"
-            placeholder="Image URL"
-            value={formData.image}
+          <select
+            name="category"
+            value={formData.category}
             onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="link"
-            placeholder="Resource Link"
-            value={formData.link}
-            onChange={handleInputChange}
-          />
+          >
+            <option value="select" disabled>
+              Select Category
+            </option>
+            <option value="motivational">Motivational</option>
+            <option value="listening">Listening Practice</option>
+            <option value="entertainment">Entertainment</option>
+          </select>
           <button type="submit">Add</button>
         </form>
       </div>
@@ -92,4 +90,4 @@ function GrammarForm({ array, setArray }) {
   );
 }
 
-export default GrammarForm;
+export default VideoForm;
