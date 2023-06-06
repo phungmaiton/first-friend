@@ -6,8 +6,7 @@ import VideoSection from "./VideoSection";
 import Pagination from "./Pagination";
 import VideoForm from "./VideoForm";
 
-function VideoPage() {
-  const [videoArray, setVideoArray] = useState([]);
+function VideoPage({ videoArray, setVideoArray }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(3);
   const indexOfLastPost = currentPage * postsPerPage;
@@ -16,16 +15,11 @@ function VideoPage() {
     setCurrentPage(selected + 1);
   };
 
-  useEffect(() => {
-    fetch("http://localhost:3000/videos")
-      .then((resp) => resp.json())
-      .then((videos) => setVideoArray(videos));
-  }, [listeningVideos]);
-
   const listeningVideos = videoArray.filter(
     (video) => video.category === "listening"
   );
 
+  console.log(videoArray);
   const currentListeningVideos = listeningVideos.slice(
     indexOfFirstPost,
     indexOfLastPost
@@ -42,6 +36,7 @@ function VideoPage() {
       <VideoSection
         sectionTitle="Listening Videos"
         filteredArray={currentListeningVideos}
+        videoArray={videoArray}
         setVideoArray={setVideoArray}
       />
       <Pagination

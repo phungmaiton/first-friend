@@ -1,7 +1,12 @@
 import React from "react";
 import VideoItem from "./VideoItem";
 
-function VideoSection({ sectionTitle, filteredArray, setVideoArray }) {
+function VideoSection({
+  sectionTitle,
+  filteredArray,
+  setVideoArray,
+  videoArray,
+}) {
   return (
     <div className="container m-auto px-2 mt-10 mb-10">
       <h2>{sectionTitle}</h2>
@@ -11,7 +16,7 @@ function VideoSection({ sectionTitle, filteredArray, setVideoArray }) {
             key={video.id}
             name={video.name}
             videoUrl={video.videoUrl}
-            videoArray={filteredArray}
+            videoArray={videoArray}
             setVideoArray={setVideoArray}
             id={video.id}
             video={video}
