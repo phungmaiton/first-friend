@@ -43,7 +43,7 @@ function VideoItem({
 
   return (
     <div>
-      <Card sx={{ maxWidth: 370 }}>
+      <Card sx={{ maxWidth: 370, minHeight: 320 }}>
         <CardMedia>
           <iframe
             width="370"
@@ -62,8 +62,14 @@ function VideoItem({
             Likes: {likes}
           </div>
 
-          <Typography gutterBottom variant="h6" component="div">
-            {name}
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            lineHeight="1.2em"
+            fontSize="14pt"
+          >
+            {name.length > 80 ? name.substring(0, 60) + "..." : name}
           </Typography>
         </CardContent>
       </Card>

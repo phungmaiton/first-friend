@@ -27,7 +27,7 @@ function GrammarPage({ grammarArray, setGrammarArray }) {
       />
 
       <div className="container m-auto px-2 mt-20 mb-20">
-        {/* <div className="grid grid-cols-3 gap-3"> */}
+        <div className="grid grid-cols-3 gap-3">
           {currentPosts.map((grammar) => (
             <GrammarItem
               grammar={grammar}
@@ -49,7 +49,7 @@ function GrammarPage({ grammarArray, setGrammarArray }) {
           array={grammarArray}
           postsPerPage={postsPerPage}
         />
-      {/* </div> */}
+      </div>
       <GrammarForm array={grammarArray} setArray={setGrammarArray} />
     </div>
   );
