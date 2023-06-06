@@ -3,8 +3,12 @@ import NavBar from "./NavBar";
 import Banner from "./Banner";
 import PopularGrammar from "./PopularGrammar";
 
-function Home({ grammarArray, setGrammarArray }) {
+function Home({ grammarArray, setGrammarArray, videoArray, setVideoArray }) {
   const topThreeGrammar = grammarArray
+    .sort((a, b) => b.likes - a.likes)
+    .slice(0, 3);
+
+  const topThreeVideos = videoArray
     .sort((a, b) => b.likes - a.likes)
     .slice(0, 3);
 

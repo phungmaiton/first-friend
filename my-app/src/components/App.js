@@ -32,6 +32,8 @@ function App() {
               <Home
                 grammarArray={grammarArray}
                 setGrammarArray={setGrammarArray}
+                videoArray={videoArray}
+                setVideoArray={setVideoArray}
               />
             }
           />
