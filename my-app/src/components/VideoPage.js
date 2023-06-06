@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Banner from "./Banner";
 import VideoSection from "./VideoSection";
 import Pagination from "./Pagination";

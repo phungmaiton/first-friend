@@ -1,8 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
 import Banner from "./Banner";
-import { useState, useEffect } from "react";
-import GrammarItem from "./GrammarItem";
 import PopularGrammar from "./PopularGrammar";
 
 function Home({ grammarArray, setGrammarArray }) {
