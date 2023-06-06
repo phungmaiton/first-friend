@@ -236,6 +236,18 @@ select {
 /* Like Button */
 
 .like-button {
-  padding: 7px 10px;
-  margin-left: 10px;
+  color:#D8766D;
+  padding-right: 10px;
+  font-size: 20px !important;
+  cursor: pointer;
+}
+
+.like-button:active {
+  background-color: #ffffff;
+  font-size: 20px !important;
+}
+
+.likes {
+  text-align: right;
+  font-size: 15px;
 }
