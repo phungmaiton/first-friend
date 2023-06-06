@@ -46,7 +46,13 @@ function GrammarItem({
   };
   return (
     <div>
-      <Card sx={{ maxWidth: 370, minHeight: 410, marginBottom: "20px" }}>
+      <Card
+        sx={{
+          maxWidth: 370,
+          minHeight: 410,
+          marginBottom: "20px",
+        }}
+      >
         <CardMedia sx={{ height: 200 }} image={image} title={title} />
         <div className="card-content">
           <div className="likes">
