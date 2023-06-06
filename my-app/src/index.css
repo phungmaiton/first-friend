@@ -251,3 +251,12 @@ select {
   text-align: right;
   font-size: 15px;
 }
+
+.card-content {
+  padding: 10px 10px 0 20px;
+  min-height: 155px;
+}
+
+.card-action {
+  padding: 0 0 5px 10px;
+}

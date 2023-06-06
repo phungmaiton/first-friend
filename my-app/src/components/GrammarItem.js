@@ -51,7 +51,8 @@ function GrammarItem({
     <div>
       <Card sx={{ maxWidth: 370, minHeight: 410, marginBottom: "20px" }}>
         <CardMedia sx={{ height: 200 }} image={image} title={title} />
-        <CardContent sx={{ minHeight: 180 }}>
+        {/* <CardContent sx={{ minHeight: 180 }}> */}
+        <div className="card-content">
           {/* <Typography variant="body2" color="text.secondary" textAlign="right"> */}
           <div className="likes">
             <a className="like-button" onClick={handleClick}>
@@ -80,12 +81,14 @@ function GrammarItem({
               ? description
               : description.substring(0, 120) + "..."}
           </Typography>
-        </CardContent>
-        <CardActions>
+        </div>
+        {/* </CardContent> */}
+        <div className="card-action">
           <a href={link} target="_blank">
             <button className="learn-more">Learn More</button>
           </a>
-        </CardActions>
+        </div>
+        {/* </CardActions> */}
       </Card>
     </div>
   );
