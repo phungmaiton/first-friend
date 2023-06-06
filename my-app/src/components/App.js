@@ -8,12 +8,20 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [grammarArray, setGrammarArray] = useState([]);
+  const [videoArray, setVideoArray] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/grammar")
       .then((resp) => resp.json())
       .then((grammar) => setGrammarArray(grammar));
   }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/videos")
+      .then((resp) => resp.json())
+      .then((videos) => setVideoArray(videos));
+  }, []);
+
   return (
     <div>
       <BrowserRouter>
@@ -37,7 +45,15 @@ function App() {
               />
             }
           />
-          <Route path="/videos" element={<VideoPage />} />
+          <Route
+            path="/videos"
+            element={
+              <VideoPage
+                videoArray={videoArray}
+                setVideoArray={setVideoArray}
+              />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
