@@ -25,6 +25,24 @@ function VideoPage({ videoArray, setVideoArray }) {
     indexOfLastPost
   );
 
+  const entertainmentVideos = videoArray.filter(
+    (video) => video.category === "entertainment"
+  );
+
+  const currentEntertainmentVideos = entertainmentVideos.slice(
+    indexOfFirstPost,
+    indexOfLastPost
+  );
+
+  const motivationVideos = videoArray.filter(
+    (video) => video.category === "motivation"
+  );
+  
+  const currentMotivationVideos = motivationVideos.slice(
+    indexOfFirstPost,
+    indexOfLastPost
+  );
+
   return (
     <div>
       <NavBar />
@@ -33,6 +51,7 @@ function VideoPage({ videoArray, setVideoArray }) {
         subTitle="Watch Some Videos"
         background="https://www.worldatlas.com/r/w768/upload/7f/2c/f0/seoul.jpg"
       />
+      <div className="container m-auto px-2 mt-20 mb-20">
       <VideoSection
         sectionTitle="Listening Videos"
         filteredArray={currentListeningVideos}
@@ -44,6 +63,25 @@ function VideoPage({ videoArray, setVideoArray }) {
         array={listeningVideos}
         postsPerPage={postsPerPage}
       />
+      <VideoSection
+        sectionTitle="Motivational Videos"
+        filteredArray={currentMotivationVideos}
+      />
+      <Pagination
+        paginate={paginate}
+        array={motivationVideos}
+        postsPerPage={postsPerPage}
+      />
+      <VideoSection
+        sectionTitle="Entertainment Videos"
+        filteredArray={currentEntertainmentVideos}
+      />
+      <Pagination
+        paginate={paginate}
+        array={entertainmentVideos}
+        postsPerPage={postsPerPage}
+      />
+      </div>
       <VideoForm array={videoArray} setArray={setVideoArray} />
     </div>
   );
