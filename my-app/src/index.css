@@ -80,6 +80,7 @@ code {
   margin-left: 50px;
   height: 110px;      
   line-height: 110px;
+  transition: font-weight .3s;
 }
 
 #logo {
@@ -156,11 +157,16 @@ button {
   font-size: 12x;
   text-transform: uppercase;
   padding: 7px 20px 7px 20px;
-  margin-top: 1rem
+  margin-top: 1rem;
+  transition: background-color .3s;
 }
 
 button:hover {
   background-color: #778AC6;
+}
+
+button.disabled {
+  background-color: gray;
 }
 
 .pagination {
@@ -212,3 +218,24 @@ select {
   padding: 20px; 
 }
 
+/* Learn More */
+
+.learn-more {
+  color:#778AC6;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  padding: 7px 10px;
+  transition: background-color .3s;
+}
+
+.learn-more:hover {
+  background-color: #ffffff;
+  color: #D8766D;
+}
+
+/* Like Button */
+
+.like-button {
+  padding: 7px 10px;
+  margin-left: 10px;
+}
