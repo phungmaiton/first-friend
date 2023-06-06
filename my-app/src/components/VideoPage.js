@@ -20,7 +20,7 @@ function VideoPage() {
     fetch("http://localhost:3000/videos")
       .then((resp) => resp.json())
       .then((videos) => setVideoArray(videos));
-  }, []);
+  }, [listeningVideos]);
 
   const listeningVideos = videoArray.filter(
     (video) => video.category === "listening"
@@ -42,6 +42,7 @@ function VideoPage() {
       <VideoSection
         sectionTitle="Listening Videos"
         filteredArray={currentListeningVideos}
+        setVideoArray={setVideoArray}
       />
       <Pagination
         paginate={paginate}

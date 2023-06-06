@@ -25,47 +25,27 @@ function GrammarItem({
   const [isLiked, setIsLiked] = useState(false);
 
   const handleClick = () => {
+    const updatedLikes = isLiked ? likes - 1 : likes + 1;
     setIsLiked(!isLiked);
 
-    if (!isLiked) {
-      const updateObj = {
-        likes: grammar.likes + 1,
-      };
-      fetch(`http://localhost:3000/grammar/${id}`, {
-        method: "PATCH",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updateObj),
-      })
-        .then((resp) => resp.json())
-        .then((updatedGrammar) => {
-          const newGrammarArray = grammarArray.map((grammar) =>
-            grammar.id === id ? updatedGrammar : grammar
-          );
-          setGrammarArray(newGrammarArray);
-        });
-    } else {
-      const updateObj = {
-        likes: grammar.likes - 1,
-      };
-      fetch(`http://localhost:3000/grammar/${id}`, {
-        method: "PATCH",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(updateObj),
-      })
-        .then((resp) => resp.json())
-        .then((updatedGrammar) => {
-          const newGrammarArray = grammarArray.map((grammar) =>
-            grammar.id === id ? updatedGrammar : grammar
-          );
-          setGrammarArray(newGrammarArray);
-        });
-    }
+    const updateObj = {
+      likes: updatedLikes,
+    };
+    fetch(`http://localhost:3000/grammar/${id}`, {
+      method: "PATCH",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updateObj),
+    })
+      .then((resp) => resp.json())
+      .then((updatedGrammar) => {
+        const newGrammarArray = grammarArray.map((grammar) =>
+          grammar.id === id ? updatedGrammar : grammar
+        );
+        setGrammarArray(newGrammarArray);
+      });
   };
   return (
     <div>
