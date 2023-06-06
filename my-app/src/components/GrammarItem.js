@@ -26,39 +26,66 @@ function GrammarItem({
 
   const handleClick = () => {
     setIsLiked(!isLiked);
-    const updateObj = {
-      likes: grammar.likes + 1,
-    };
-    fetch(`http://localhost:3000/grammar/${id}`, {
-      method: "PATCH",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updateObj),
-    })
-      .then((resp) => resp.json())
-      .then((updatedGrammar) => {
-        const newGrammarArray = grammarArray.map((grammar) =>
-          grammar.id === id ? updatedGrammar : grammar
-        );
-        setGrammarArray(newGrammarArray);
-      });
+
+    if (!isLiked) {
+      const updateObj = {
+        likes: grammar.likes + 1,
+      };
+      fetch(`http://localhost:3000/grammar/${id}`, {
+        method: "PATCH",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updateObj),
+      })
+        .then((resp) => resp.json())
+        .then((updatedGrammar) => {
+          const newGrammarArray = grammarArray.map((grammar) =>
+            grammar.id === id ? updatedGrammar : grammar
+          );
+          setGrammarArray(newGrammarArray);
+        });
+    } else {
+      const updateObj = {
+        likes: grammar.likes - 1,
+      };
+      fetch(`http://localhost:3000/grammar/${id}`, {
+        method: "PATCH",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updateObj),
+      })
+        .then((resp) => resp.json())
+        .then((updatedGrammar) => {
+          const newGrammarArray = grammarArray.map((grammar) =>
+            grammar.id === id ? updatedGrammar : grammar
+          );
+          setGrammarArray(newGrammarArray);
+        });
+    }
   };
   return (
     <div>
       <Card sx={{ maxWidth: 370, minHeight: 410, marginBottom: "20px" }}>
         <CardMedia sx={{ height: 200 }} image={image} title={title} />
         <CardContent sx={{ minHeight: 180 }}>
-          <Typography variant="body2" color="text.secondary" textAlign="right">
+          {/* <Typography variant="body2" color="text.secondary" textAlign="right"> */}
+          <div className="likes">
+            <a className="like-button" onClick={handleClick}>
+              {isLiked ? "♥" : "♡"}
+            </a>
             Likes: {likes}
-          </Typography>
+          </div>
+          {/* </Typography> */}
           <Typography
             gutterBottom
             variant="h5"
             component="div"
             lineHeight="1.2em"
-            fontSize="17pt"
+            fontSize="15pt"
           >
             {title}
           </Typography>
@@ -71,20 +98,13 @@ function GrammarItem({
           >
             {showFullDescription
               ? description
-              : description.substring(0, 150) + "..."}
+              : description.substring(0, 120) + "..."}
           </Typography>
         </CardContent>
         <CardActions>
           <a href={link} target="_blank">
-            <button class="learn-more">Learn More</button>
+            <button className="learn-more">Learn More</button>
           </a>
-          <button
-            class={isLiked ? "disabled like-button" : "like-button"}
-            onClick={handleClick}
-            disabled={isLiked}
-          >
-            {isLiked ? "Liked" : "Like ❤️"}
-          </button>
         </CardActions>
       </Card>
     </div>
