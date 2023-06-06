@@ -24,6 +24,29 @@ body {
    }
 }
 
+.page-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+.page-exit {
+  opacity: 0;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -57,6 +80,7 @@ code {
   margin-left: 50px;
   height: 110px;      
   line-height: 110px;
+  transition: font-weight .3s;
 }
 
 #logo {
@@ -133,11 +157,16 @@ button {
   font-size: 12x;
   text-transform: uppercase;
   padding: 7px 20px 7px 20px;
-  margin-top: 1rem
+  margin-top: 1rem;
+  transition: background-color .3s;
 }
 
 button:hover {
   background-color: #778AC6;
+}
+
+button.disabled {
+  background-color: gray;
 }
 
 .pagination {
@@ -174,6 +203,14 @@ input {
   margin-right: 20px;
 }
 
+select {
+  padding: 5px 5px 5px 5px;
+  width: 220px;
+  border: solid 2px;
+  border-color:	rgb(220,220,220);
+  border-radius: 5px;
+  margin-right: 20px;
+}
 /* Form Section */
 
 .form-section {
@@ -181,3 +218,24 @@ input {
   padding: 20px; 
 }
 
+/* Learn More */
+
+.learn-more {
+  color:#778AC6;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  padding: 7px 10px;
+  transition: background-color .3s;
+}
+
+.learn-more:hover {
+  background-color: #ffffff;
+  color: #D8766D;
+}
+
+/* Like Button */
+
+.like-button {
+  padding: 7px 10px;
+  margin-left: 10px;
+}

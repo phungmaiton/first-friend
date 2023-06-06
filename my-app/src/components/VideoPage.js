@@ -2,9 +2,9 @@ import React from "react";
 import NavBar from "./NavBar";
 import { useState, useEffect } from "react";
 import Banner from "./Banner";
-import VideoItem from "./VideoItem";
 import VideoSection from "./VideoSection";
 import Pagination from "./Pagination";
+import VideoForm from "./VideoForm";
 
 function VideoPage() {
   const [videoArray, setVideoArray] = useState([]);
@@ -30,6 +30,7 @@ function VideoPage() {
     indexOfFirstPost,
     indexOfLastPost
   );
+
   return (
     <div>
       <NavBar />
@@ -44,12 +45,12 @@ function VideoPage() {
       />
       <Pagination
         paginate={paginate}
-        array={currentListeningVideos}
+        array={listeningVideos}
         postsPerPage={postsPerPage}
       />
+      <VideoForm array={videoArray} setArray={setVideoArray} />
     </div>
   );
 }
 
-
-// export default VideoPage;
+export default VideoPage;

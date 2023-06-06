@@ -7,12 +7,44 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
 
-function GrammarItem({ image, title, description, link, likes }) {
+function GrammarItem({
+  image,
+  title,
+  description,
+  link,
+  likes,
+  id,
+  setGrammarArray,
+  grammarArray,
+  grammar,
+}) {
   const [showFullDescription, setShowFullDescription] = useState(false);
   function handleDescClick() {
     setShowFullDescription((showFullDescription) => !showFullDescription);
   }
+  const [isLiked, setIsLiked] = useState(false);
 
+  const handleClick = () => {
+    setIsLiked(!isLiked);
+    const updateObj = {
+      likes: grammar.likes + 1,
+    };
+    fetch(`http://localhost:3000/grammar/${id}`, {
+      method: "PATCH",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updateObj),
+    })
+      .then((resp) => resp.json())
+      .then((updatedGrammar) => {
+        const newGrammarArray = grammarArray.map((grammar) =>
+          grammar.id === id ? updatedGrammar : grammar
+        );
+        setGrammarArray(newGrammarArray);
+      });
+  };
   return (
     <div>
       <Card sx={{ maxWidth: 370, minHeight: 410, marginBottom: "20px" }}>
@@ -39,19 +71,20 @@ function GrammarItem({ image, title, description, link, likes }) {
           >
             {showFullDescription
               ? description
-              : description.substring(0, 100) + "..."}
+              : description.substring(0, 150) + "..."}
           </Typography>
         </CardContent>
         <CardActions>
-          <Button
-            className="Button"
-            style={{ color: "#D8766D" }}
-            href={link}
-            target="_blank"
-            size="small"
+          <a href={link} target="_blank">
+            <button class="learn-more">Learn More</button>
+          </a>
+          <button
+            class={isLiked ? "disabled like-button" : "like-button"}
+            onClick={handleClick}
+            disabled={isLiked}
           >
-            Learn More
-          </Button>
+            {isLiked ? "Liked" : "Like ❤️"}
+          </button>
         </CardActions>
       </Card>
     </div>

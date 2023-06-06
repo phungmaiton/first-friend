@@ -37,12 +37,16 @@ function GrammarPage() {
         <div className="grid grid-cols-3 gap-3">
           {currentPosts.map((grammar) => (
             <GrammarItem
+              grammar={grammar}
               key={grammar.id}
+              id={grammar.id}
               title={grammar.name}
               image={grammar.image}
               description={grammar.description}
               link={grammar.link}
               likes={grammar.likes}
+              setGrammarArray={setGrammarArray}
+              grammarArray={grammarArray}
             />
           ))}
         </div>
