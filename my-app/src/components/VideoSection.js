@@ -8,7 +8,7 @@ function VideoSection({
   videoArray,
 }) {
   return (
-    <div className="container m-auto px-2 pt-20 pb-20">
+    <div className="container m-auto px-2 pt-10 pb-10">
       <h2 className="video-divider">
         <span className="video-divider-textbox">{sectionTitle}</span>
       </h2>
