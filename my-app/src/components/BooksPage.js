@@ -5,6 +5,7 @@ import BookItem from "./BookItem";
 import Banner from "./Banner";
 import Pagination from "./Pagination";
 import BookForm from "./BookForm";
+import Footer from "./Footer";
 
 function BooksPage({ booksArray, setBooksArray }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -50,6 +51,7 @@ function BooksPage({ booksArray, setBooksArray }) {
         />
       </div>
       <BookForm array={booksArray} setArray={setBooksArray} />
+      <Footer />
     </div>
   );
 }

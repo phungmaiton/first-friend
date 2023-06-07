@@ -5,6 +5,7 @@ import Banner from "./Banner";
 import VideoSection from "./VideoSection";
 import Pagination from "./Pagination";
 import VideoForm from "./VideoForm";
+import Footer from "./Footer";
 
 function VideoPage({ videoArray, setVideoArray }) {
   const [postsPerPage] = useState(3);
@@ -105,6 +106,7 @@ function VideoPage({ videoArray, setVideoArray }) {
         />
       </div>
       <VideoForm array={videoArray} setArray={setVideoArray} />
+      <Footer />
     </div>
   );
 }

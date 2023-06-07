@@ -4,8 +4,16 @@ import Banner from "./Banner";
 import PopularGrammar from "./PopularGrammar";
 import PopularVideos from "./PopularVideos";
 import PopularBooks from "./PopularBooks";
+import Footer from "./Footer";
 
-function Home({ grammarArray, setGrammarArray, videoArray, setVideoArray, booksArray, setBooksArray }) {
+function Home({
+  grammarArray,
+  setGrammarArray,
+  videoArray,
+  setVideoArray,
+  booksArray,
+  setBooksArray,
+}) {
   const topThreeGrammar = grammarArray
     .sort((a, b) => b.likes - a.likes)
     .slice(0, 3);
@@ -47,6 +55,7 @@ function Home({ grammarArray, setGrammarArray, videoArray, setVideoArray, booksA
           setVideoArray={setVideoArray}
         />
       </div>
+      <Footer />
     </div>
   );
 }

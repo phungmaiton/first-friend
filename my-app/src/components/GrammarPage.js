@@ -5,6 +5,7 @@ import GrammarItem from "./GrammarItem";
 import Banner from "./Banner";
 import Pagination from "./Pagination";
 import GrammarForm from "./GrammarForm";
+import Footer from "./Footer";
 
 function GrammarPage({ grammarArray, setGrammarArray }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -50,6 +51,7 @@ function GrammarPage({ grammarArray, setGrammarArray }) {
         />
       </div>
       <GrammarForm array={grammarArray} setArray={setGrammarArray} />
+      <Footer />
     </div>
   );
 }
