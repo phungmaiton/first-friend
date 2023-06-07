@@ -4,7 +4,7 @@ import Home from "./Home";
 import GrammarPage from "./GrammarPage";
 import BooksPage from "./BooksPage";
 import VideoPage from "./VideoPage";
-import OtherResources from "./OtherResources"
+import OtherResourcesPage from "./OtherResourcesPage"
 import { useState, useEffect } from "react";
 
 function App() {
@@ -82,10 +82,10 @@ function App() {
           <Route 
             path = "/other"
             element={
-              <OtherResources
+              <OtherResourcesPage
                 linksArray={linksArray}
                 setLinksArray={setLinksArray}
-              ></OtherResources>}
+              ></OtherResourcesPage>}
               />
               
         </Routes>
