@@ -72,7 +72,7 @@ function VideoPage({ videoArray, setVideoArray }) {
       <Banner
         pageTitle="Videos"
         subTitle="Watch Some Videos"
-        background="https://www.worldatlas.com/r/w768/upload/7f/2c/f0/seoul.jpg"
+        background="https://www.gsma.com/newsroom/wp-content/uploads//Korean-Mobile-IoT.jpg"
       />
       <div className="container m-auto px-2 mt-10 mb-20">
         <VideoSection

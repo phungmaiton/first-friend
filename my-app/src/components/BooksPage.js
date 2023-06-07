@@ -36,7 +36,7 @@ function BooksPage({ booksArray, setBooksArray }) {
       <Banner
         pageTitle="Books"
         subTitle="Read Some Books"
-        background="https://a.cdn-hotels.com/gdcs/production81/d60/e414d9a4-df1b-4e19-976f-b83e8a1b2c8d.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
+        background="https://a.cdn-hotels.com/gdcs/production158/d375/8bd96051-345f-497d-90ae-caa8a2a14983.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
       />
 
       <div className="search container m-auto px-2 pt-10 pb-10">
