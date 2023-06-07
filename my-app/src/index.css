@@ -428,3 +428,24 @@ a.footer-menu:hover {
   margin-top:20px;
   float:right;
 }
+
+.home-divider {
+  border-bottom: 0.25rem solid #D8766D;
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.home-divider-textbox {
+  display: inline-block;
+  margin: 0;
+  padding: 0.375rem 1rem 0.125rem;
+  font-size: 1.25rem;
+  font-weight: 640;
+  line-height: 1.4;
+  color: #fff;
+  border-color: #D8766D;
+  background-color: #D8766D;
+  letter-spacing: 1px;
+}
