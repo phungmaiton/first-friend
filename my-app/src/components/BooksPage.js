@@ -26,8 +26,8 @@ function BooksPage({ booksArray, setBooksArray }) {
         background="https://a.cdn-hotels.com/gdcs/production81/d60/e414d9a4-df1b-4e19-976f-b83e8a1b2c8d.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
       />
 
-      <div className="container m-auto px-2 mt-20 mb-20">
-        <div className="grid grid-cols-3 gap-3">
+      <div className="container m-auto px-2 pt-20 pb-20">
+        <div className="grid grid-cols-1 px-8 sm:grid-cols-2 gap-8 lg:grid-cols-3 gap-10 ">
           {currentPosts.map((book) => (
             <BookItem
               book={book}

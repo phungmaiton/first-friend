@@ -1,19 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { useState } from "react";
 
-function GrammarItem({
-  image,
-  title,
-  description,
+function OtherResourcesItem({
   link,
-  likes,
+  key,
   id,
-  setGrammarArray,
-  grammarArray,
-  grammar,
+  name,
+  description,
+  image,
+  likes,
+  setLinksArray,
+  linksArray,
 }) {
   const [showFullDescription, setShowFullDescription] = useState(false);
   function handleDescClick() {
@@ -28,7 +27,7 @@ function GrammarItem({
     const updateObj = {
       likes: updatedLikes,
     };
-    fetch(`http://localhost:3000/grammar/${id}`, {
+    fetch(`http://localhost:3000/other/${id}`, {
       method: "PATCH",
       headers: {
         Accept: "application/json",
@@ -37,11 +36,11 @@ function GrammarItem({
       body: JSON.stringify(updateObj),
     })
       .then((resp) => resp.json())
-      .then((updatedGrammar) => {
-        const newGrammarArray = grammarArray.map((grammar) =>
-          grammar.id === id ? updatedGrammar : grammar
+      .then((updatedLinks) => {
+        const newLinksArray = linksArray.map((link) =>
+          link.id === id ? updatedLinks : link
         );
-        setGrammarArray(newGrammarArray);
+        setLinksArray(newLinksArray);
       });
   };
   return (
@@ -53,7 +52,7 @@ function GrammarItem({
           marginBottom: "20px",
         }}
       >
-        <CardMedia sx={{ height: 200 }} image={image} title={title} />
+        <CardMedia sx={{ height: 200 }} image={image} name={name} />
         <div className="card-content">
           <div className="likes">
             <a className="like-button" onClick={handleClick}>
@@ -68,7 +67,7 @@ function GrammarItem({
             lineHeight="1.2em"
             fontSize="15pt"
           >
-            {title}
+            {name}
           </Typography>
           <Typography
             onClick={handleDescClick}
@@ -92,4 +91,4 @@ function GrammarItem({
   );
 }
 
-export default GrammarItem;
+export default OtherResourcesItem;

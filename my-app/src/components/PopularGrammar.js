@@ -4,7 +4,7 @@ import GrammarItem from "./GrammarItem";
 function PopularGrammar({ topThreeGrammar, grammarArray, setGrammarArray }) {
   return (
     <div className="container m-auto px-2 pt-20 pb-20">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 ">
+      <div className="grid grid-cols-1 px-8 sm:grid-cols-2 gap-8 lg:grid-cols-3 gap-10 ">
         {topThreeGrammar.map((grammar) => (
           <GrammarItem
             grammar={grammar}

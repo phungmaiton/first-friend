@@ -42,18 +42,18 @@ function VideoItem({
 
   return (
     <div>
-      <Card sx={{ maxWidth: 370, minHeight: 320 }}>
+      <Card sx={{ maxWidth: 468, minHeight: 320 }}>
         <CardMedia>
           <iframe
-            width="370"
-            height="200"
+            width="100%"
+            height="220"
             align="center"
             src={videoUrl}
             allowFullScreen
             title={name}
           />
         </CardMedia>
-        <CardContent sx={{ minHeight: 100 }}>
+        <CardContent sx={{ minHeight: 121 }}>
           <div className="likes">
             <a className="like-button" onClick={handleClick}>
               {isLiked ? "♥" : "♡"}
