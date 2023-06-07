@@ -11,7 +11,7 @@ function OtherResourcesPage({linksArray, setLinksArray}) {
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = linksArray.slice(indexOfFirstPost, indexOfLastPost);
-    
+ 
     const paginate = ({ selected }) => {
         setCurrentPage(selected + 1);
       };
@@ -30,6 +30,7 @@ function OtherResourcesPage({linksArray, setLinksArray}) {
             <OtherResourcesItem 
                 link={link}
                 key={link.id}
+                id={link.id}
                 name={link.name}
                 description={link.description}
                 image={link.image}

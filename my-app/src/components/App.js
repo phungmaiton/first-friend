@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:3000/other")
       .then((resp) => resp.json())
-      .then((links) => setBooksArray(links));
+      .then((links) => setLinksArray(links));
   }, []);
 
   return (
