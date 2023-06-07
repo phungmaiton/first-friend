@@ -13,10 +13,20 @@ function BooksPage({ booksArray, setBooksArray }) {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = booksArray.slice(indexOfFirstPost, indexOfLastPost);
+  const [searchTerm, setSearchTerm]= useState("")
 
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
   };
+
+  function handleChange(e) {
+    setSearchTerm(e.target.value)
+  }
+
+  const filteredItems = currentPosts.filter((book) => {
+    return book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      book.description.toLowerCase().includes(searchTerm.toLowerCase())
+  })
 
   return (
     <div>
@@ -27,9 +37,15 @@ function BooksPage({ booksArray, setBooksArray }) {
         background="https://a.cdn-hotels.com/gdcs/production158/d375/8bd96051-345f-497d-90ae-caa8a2a14983.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
       />
 
+      <div className="search">
+        <input onChange = {handleChange} type="text" className="searchTerm" />
+      </div>
+
       <div className="container m-auto px-2 pt-20 pb-20">
-        <div className="grid grid-cols-1 px-8 sm:grid-cols-2 gap-8 lg:grid-cols-3 gap-10 pb-5">
-          {currentPosts.map((book) => (
+
+        <div className="grid grid-cols-1 px-8 sm:grid-cols-2 gap-8 lg:grid-cols-3 gap-10 ">
+          {filteredItems.map((book) => (
+
             <BookItem
               book={book}
               key={book.id}
