@@ -204,7 +204,7 @@
       "id": 12
     }
   ],
-  "helpfulLinks": [
+  "other": [
     {
       "id": 1,
       "name": "How to study Korean",
@@ -233,17 +233,26 @@
       "id": 4,
       "name": "HelloTalk",
       "description": "Talk to the World! Learn a language for free by chatting with native speakers around the world!",
-      "image": "https://ali-global-cdn.hellotalk8.com/wp-content/themes/salient-child/images/hello-talk.svg",
-      "link": "https://www.hellotalk.com/?lang=en",
+      "image": "https://ali-global-cdn.hellotalk8.com/www/image/partner/show.png",
+      "link": "https://www.hellotalk.com/partners/Korean-Language-Exchange?lang=en",
       "likes": 1
     },
     {
       "id": 5,
+      "name": "Korean-English Dictionary",
+      "description": "A Korean-English Dictionary, Korean Word of the day, Korean food of the day.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdXWHl9oXuBzjWfQnU3CEA_dCjhKVjIqs-UA&usqp=CAU",
+      "link": "https://korean.dict.naver.com/koendict/#/main",
+      "likes": 1
+    },
+    {
+      "id": 6,
       "name": "Koreantopik: Self Study Korean",
       "description": " This blog was created with the purpose to build an online korean grammar library as well as to create a complete course for English-speaking Korean learners to study Korean themselves from beginning to upper-intermediate level.",
       "image": "https://4.bp.blogspot.com/-1gRzzLYr5ps/WtRa4VZM9nI/AAAAAAAAEr4/8PgzXt5I45U_f4yE8k638a2me9cG6L36wCK4BGAYYCw/s1600/Korean%2BTopik.jpg",
       "link": "https://www.koreantopik.com/",
       "likes": 1
     }
+
   ]
 }
