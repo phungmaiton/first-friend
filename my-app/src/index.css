@@ -92,7 +92,7 @@ code {
   display: inline-block;
   vertical-align: top;
   height: 100px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   margin-top: 5px; 
 }
 
@@ -326,7 +326,7 @@ select {
 /* Form Section */
 
 .form-section {
-  background-color: #FFFAF7;
+  background-color: #ffffff;
   padding: 20px; 
 }
 
