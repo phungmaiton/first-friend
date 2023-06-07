@@ -43,7 +43,6 @@ function GrammarPage({ grammarArray, setGrammarArray }) {
             />
           ))}
         </div>
-
         <Pagination
           paginate={paginate}
           array={grammarArray}

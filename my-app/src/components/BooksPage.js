@@ -43,7 +43,6 @@ function BooksPage({ booksArray, setBooksArray }) {
             />
           ))}
         </div>
-
         <Pagination
           paginate={paginate}
           array={booksArray}
