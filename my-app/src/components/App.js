@@ -4,12 +4,14 @@ import Home from "./Home";
 import GrammarPage from "./GrammarPage";
 import BooksPage from "./BooksPage";
 import VideoPage from "./VideoPage";
+import OtherResources from "./OtherResources"
 import { useState, useEffect } from "react";
 
 function App() {
   const [grammarArray, setGrammarArray] = useState([]);
   const [videoArray, setVideoArray] = useState([]);
   const [booksArray, setBooksArray] = useState([]);
+  const [linksArray, setLinksArray] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:3000/grammar")
@@ -27,6 +29,12 @@ function App() {
     fetch("http://localhost:3000/books")
       .then((resp) => resp.json())
       .then((books) => setBooksArray(books));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/other")
+      .then((resp) => resp.json())
+      .then((links) => setBooksArray(links));
   }, []);
 
   return (
@@ -71,6 +79,15 @@ function App() {
               />
             }
           />
+          <Route 
+            path = "/other"
+            element={
+              <OtherResources
+                linksArray={linksArray}
+                setLinksArray={setLinksArray}
+              ></OtherResources>}
+              />
+              
         </Routes>
       </BrowserRouter>
     </div>
