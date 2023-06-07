@@ -42,11 +42,11 @@ function VideoItem({
 
   return (
     <div>
-      <Card sx={{ maxWidth: 468, minHeight: 320 }}>
+      <Card sx={{ maxWidth: 488, minHeight: 320 }}>
         <CardMedia>
           <iframe
             width="100%"
-            height="220"
+            height="225"
             align="center"
             src={videoUrl}
             allowFullScreen

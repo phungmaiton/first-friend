@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import Pagination from "./Pagination";
 import OtherResourcesItem from "./OtherResourcesItem";
 import OtherResourcesForm from "./OtherResourcesForm";
+import Footer from "./Footer";
 
 function OtherResourcesPage({ linksArray, setLinksArray }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -52,6 +53,7 @@ function OtherResourcesPage({ linksArray, setLinksArray }) {
         array={linksArray}
         postsPerPage={postsPerPage}
       />
+      <Footer />
     </div>
   );
 }
