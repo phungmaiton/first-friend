@@ -71,10 +71,10 @@ code {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px 0px 20px;
+  padding: 0 50px;
 }
 
-.topnav a {
+/* .topnav a {
   color: #0e0e0e;
   text-align: center;
   padding: 0 16px;
@@ -86,7 +86,7 @@ code {
   height: 110px;      
   line-height: 110px;
   transition: font-weight .3s;
-}
+} */
 
 #logo {
   display: inline-block;
@@ -118,7 +118,7 @@ code {
 }
 
 .menu > a {
-  margin: 0 1rem;
+  margin: 0 2rem;
   overflow: hidden;
 }
 
@@ -198,7 +198,7 @@ code {
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   #menu-toggle:checked ~ .menu a {
-    border: 1px solid #333;
+    /* border: 1px solid #333; */
     height: 2.5em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
