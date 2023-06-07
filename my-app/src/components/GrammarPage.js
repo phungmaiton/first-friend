@@ -13,20 +13,22 @@ function GrammarPage({ grammarArray, setGrammarArray }) {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = grammarArray.slice(indexOfFirstPost, indexOfLastPost);
-  const [searchTerm, setSearchTerm]= useState("")
+  const [searchTerm, setSearchTerm] = useState("");
 
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
   };
 
   function handleChange(e) {
-    setSearchTerm(e.target.value)
+    setSearchTerm(e.target.value);
   }
 
   const filteredItems = currentPosts.filter((grammar) => {
-    return grammar.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    return (
+      grammar.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       grammar.description.toLowerCase().includes(searchTerm.toLowerCase())
-  })
+    );
+  });
 
   return (
     <div>
@@ -37,15 +39,18 @@ function GrammarPage({ grammarArray, setGrammarArray }) {
         background="https://a.cdn-hotels.com/gdcs/production125/d653/a01517ea-0ec0-4639-b862-33922c62f04a.jpg"
       />
 
-      <div className="search">
-        <input onChange = {handleChange} type="text" className="searchTerm" />
+      <div className="search container m-auto px-2 pt-10 pb-10">
+        <input
+          onChange={handleChange}
+          type="text"
+          className="searchTerm"
+          placeholder="Search..."
+        />
       </div>
-      
-      <div className="container m-auto px-2 pt-20 pb-20">
 
+      <div className="container m-auto px-2 pb-20">
         <div className="grid grid-cols-1 px-8 sm:grid-cols-2 gap-8 lg:grid-cols-3 gap-10 ">
           {filteredItems.map((grammar) => (
-
             <GrammarItem
               grammar={grammar}
               key={grammar.id}
