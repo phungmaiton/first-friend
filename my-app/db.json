@@ -6,7 +6,7 @@
       "description": "The Korean sentence typically consists of the : Subject - Object - Predicate(verb) Or Subject - Adjective",
       "image": "https://www.topikguide.com/wp-content/uploads/2022/02/TG-website-86.jpg",
       "link": "https://www.topikguide.com/korean-sentence-structure/",
-      "likes": 6
+      "likes": 8
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "description": "Following is the list of all the Korean grammar patterns that are used to describe a speaker's realisation or surprise about something in the first clause and the result or effect in the latter half of the sentence.",
       "image": "https://www.topikguide.com/wp-content/uploads/2022/01/TG-website-83.jpg",
       "link": "https://www.topikguide.com/korean-grammar-discovery-and-result/",
-      "likes": 7
+      "likes": 8
     },
     {
       "id": 4,
@@ -261,6 +261,5 @@
       "link": "https://www.90daykorean.com/learn-korean-fast-tips/",
       "likes": 1
     }
-
   ]
 }

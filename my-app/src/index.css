@@ -315,6 +315,12 @@ input {
   margin-right: 20px;
 }
 
+input:focus {
+  border: solid 2px;
+  border-color: #D8766D;
+  outline:none;
+}
+
 select {
   padding: 5px 5px 5px 5px;
   width: 220px;
@@ -452,22 +458,27 @@ a.footer-menu:hover {
 
 .search {
   width: 50%;
-  text-align: center;
-
+  text-align: left;
   position: relative;
   display: block;
-  margin: auto;
-  padding: 2rem;
+  /* margin: auto;
+  padding: 2rem; */
 }
 
 .searchTerm {
-  text-align: center;
+  text-align: left;
   width: 100%;
-  border: 3px solid #990033;
-  padding: 5px;
-  height: 3rem;
+  padding: 5px 5px 5px 5px;
+  border: solid 2px;
+  border-color:	rgb(220,220,220);
   border-radius: 5px;
-  outline: none;
-  font-size: 1.5rem;
+
+  margin-right: 20px;
+}
+
+.searchTerm:focus {
+  border: solid 2px;
+  border-color: #D8766D;
+  outline:none;
 
 }
