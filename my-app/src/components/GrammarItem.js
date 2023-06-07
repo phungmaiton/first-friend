@@ -48,7 +48,7 @@ function GrammarItem({
     <div>
       <Card
         sx={{
-          maxWidth: 370,
+          maxWidth: 488,
           minHeight: 410,
           marginBottom: "20px",
         }}
