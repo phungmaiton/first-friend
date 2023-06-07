@@ -64,7 +64,7 @@
       "name": "Talk To Me In Korean Level 1",
       "description": "Learn Korean More Effectively with Our Core Grammar Lessons! From saying the basic greetings, to counting numbers, and to having simple yet natural conversations in Korean, you can learn the basics of the Korean language with this textbook.",
       "purchaseUrl": "https://talktomeinkorean.com/product/gr1/",
-      "likes": 3
+      "likes": 16
     },
     {
       "id": 2,
@@ -72,7 +72,7 @@
       "name": "Korean Made Simple",
       "description": "Korean Made Simple is a book for anyone who wishes to begin learning the Korean language. No matter your age, you can learn how to read, write, speak and understand Korean. Learn the Korean writing system, Korean culture, and even history. Learn over 1,000 vocabulary words and phrases through 20 in-depth and fun lessons, filled with plenty of examples. Additionally, practice sections with answer keys are built into every chapter. This book also contains additional advanced level notes for more skilled Korean speakers looking for a review of basic grammar and concepts, including a full appendix covering sound change rules. Start your exciting journey into the Korean language today. Let's learn Korean!",
       "purchaseUrl": "https://gobillykorean.com/korean-made-simple/",
-      "likes": 2
+      "likes": 13
     },
     {
       "id": 3,
@@ -96,7 +96,7 @@
       "name": "Learn Korean",
       "description": "This Korean book is suitable for adults and kids, from total beginners to those looking to improve their writing Hangul writing skills. Our self-study exercises and how-to-write style practice pages will simplify the whole process for elementary and intermediate level Korean. Your tutor, Jennie Lee, will teach you everything you need to know about the Hangul script, with just enough detail to get started quickly! Features: a comprehensive overview of the pronunciation rules, a large section of beginner vocabulary for practice, a guide to reading and writing numbers in Korean, understanding native handwriting, and more!",
       "purchaseUrl": "https://www.barnesandnoble.com/w/learn-korean-the-language-workbook-for-beginners-jennie-lee/1139047291",
-      "likes": 7
+      "likes": 11
     },
     {
       "id": 6,
@@ -153,7 +153,7 @@
       "name": "(CC) 【중급말하기】 01.성격(Personality) 성격이 급해 가지고 실수를 많이 해요",
       "description": "여러분은 어떤 성격이에요? 성격에 대한 대화를 같이 들어봐요!",
       "videoUrl": "https://www.youtube.com/embed/gG4uudNP9jw",
-      "likes": 234,
+      "likes": 235,
       "category": "listening"
     },
     {
@@ -193,7 +193,7 @@
       "name": "Learn Korean with a comedy show 'Comedy Big League(코미디빅리그)' | Learn Korean with a culture",
       "description": "안녕하세요. 여러분 가둘 입니다. Have you guys watched a 'Korean Comedy show'?? Why don't you see if it's also funny for you too? You can learn Korean words while watching too~!",
       "videoUrl": "https://www.youtube.com/embed/Uhd9LR8INPQ",
-      "likes": 2,
+      "likes": 3,
       "category": "entertainment"
     },
     {

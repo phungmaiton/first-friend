@@ -13,7 +13,7 @@ function BookItem({
     book,
     booksArray,
     setBooksArray
- }) {
+}) {
 
     const [showFullDescription, setShowFullDescription] = useState(false)
     function handleDescClick() {

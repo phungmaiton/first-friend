@@ -37,6 +37,8 @@ function App() {
             path="/"
             element={
               <Home
+                booksArray={booksArray}
+                setBooksArray={setBooksArray}
                 grammarArray={grammarArray}
                 setGrammarArray={setGrammarArray}
                 videoArray={videoArray}
