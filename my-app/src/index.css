@@ -428,3 +428,24 @@ a.footer-menu:hover {
   margin-top:20px;
   float:right;
 }
+
+.search {
+  width: 50%;
+  text-align: center;
+
+  position: relative;
+  display: block;
+  margin: auto;
+  padding: 2rem;
+}
+
+.searchTerm {
+  text-align: center;
+  width: 100%;
+  border: 3px solid #990033;
+  padding: 5px;
+  height: 3rem;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.5rem;
+}
