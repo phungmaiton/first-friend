@@ -50,8 +50,9 @@ function OtherResourcesPage({ linksArray, setLinksArray }) {
 
       <OtherResourcesForm
         paginate={paginate}
-        array={linksArray}
+        linksArray={linksArray}
         postsPerPage={postsPerPage}
+        setLinksArray={setLinksArray}
       />
       <Footer />
     </div>
