@@ -25,7 +25,7 @@ function OtherResourcesPage({ linksArray, setLinksArray }) {
         background="https://a.cdn-hotels.com/gdcs/production125/d653/a01517ea-0ec0-4639-b862-33922c62f04a.jpg"
       />
       <div className="container m-auto px-2 pt-20 pb-20">
-        <div className="grid grid-cols-1 px-8 sm:grid-cols-2 gap-8 lg:grid-cols-3 gap-10 ">
+        <div className="grid grid-cols-1 px-8 sm:grid-cols-2 gap-8 lg:grid-cols-3 gap-10 pb-5 ">
           {currentPosts.map((link) => (
             <OtherResourcesItem
               link={link}
