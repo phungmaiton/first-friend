@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+  background-color: #FFFAF7;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -378,10 +379,7 @@ select {
 
 .video-divider {
   border-bottom: 0.25rem solid #778ac6;
-  /* align-items: center; */
   display: flex;
-  /* flex-flow: row wrap; */
-  /* justify-content: space-between; */
   position: relative;
   width: 100%;
   margin-bottom: 20px;

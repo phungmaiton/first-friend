@@ -3,6 +3,7 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
+
 function BookItem({
   image,
   title,
@@ -18,6 +19,7 @@ function BookItem({
   function handleDescClick() {
     setShowFullDescription((showFullDescription) => !showFullDescription);
   }
+
 
   const [isLiked, setIsLiked] = useState(false);
 
