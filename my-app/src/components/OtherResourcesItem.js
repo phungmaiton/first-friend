@@ -26,7 +26,7 @@ function OtherResourcesItem({
     const updateObj = {
       likes: updatedLikes,
     };
-    fetch(`http://localhost:3000/other/${id}`, {
+    fetch(`http://localhost:3000/resources/${id}`, {
       method: "PATCH",
       headers: {
         Accept: "application/json",
