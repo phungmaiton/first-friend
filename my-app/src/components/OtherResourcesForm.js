@@ -1,4 +1,19 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+function failureAlert() {
+    toast.warning("This resource already exists!", {
+      position: "bottom-center",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+    })
+}
 
 function OtherResourcesForm({ linksArray, setLinksArray }) {
   const initialFormValues = {
@@ -35,7 +50,7 @@ function OtherResourcesForm({ linksArray, setLinksArray }) {
     );
 
     if (resourceExists) {
-      alert("This resource already exists!");
+      failureAlert();
     } else {
       fetch("http://localhost:3000/other", {
         method: "POST",
@@ -93,6 +108,7 @@ function OtherResourcesForm({ linksArray, setLinksArray }) {
           <button type="submit">Add</button>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 }
