@@ -6,8 +6,6 @@ import OtherResourcesForm from "./OtherResourcesForm";
 import PageTransition from "./PageTransition";
 import SearchSort from "./SearchSort";
 
-
-
 function OtherResourcesPage({ 
   resourcesArray, 
   setResourcesArray, 

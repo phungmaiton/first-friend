@@ -44,7 +44,7 @@ function OtherResourcesForm({ resourcesArray, setResourcesArray }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newLink = {
+    const newResource = {
       name: formData.name,
       description: formData.description,
       image: formData.image,
@@ -66,10 +66,10 @@ function OtherResourcesForm({ resourcesArray, setResourcesArray }) {
           Accept: "application/json",
         },
 
-        body: JSON.stringify(newLink),
+        body: JSON.stringify(newResource),
       })
         .then((resp) => resp.json())
-        .then((newLink) => setResourcesArray([newLink, ...resourcesArray]));
+        .then((newResource) => setResourcesArray([newResource, ...resourcesArray]));
         jsConfetti.addConfetti({
           confettiColors: [
             "#D8766D", "#778AC6", "#E5E5E5",
