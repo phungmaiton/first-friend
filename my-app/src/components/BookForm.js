@@ -8,7 +8,7 @@ const jsConfetti = new JSConfetti()
 
 function scrollToTop() {
   window.scrollTo(0, 0);
-}
+};
 
 function failureAlert() {
     toast.warning("This resource already exists!", {
@@ -21,7 +21,7 @@ function failureAlert() {
       progress: undefined,
       theme: "light",
     })
-}
+};
 
 function BookForm({ array, setArray }) {
   const initialFormValues = {
@@ -77,7 +77,7 @@ function BookForm({ array, setArray }) {
           ],
         });
         scrollToTop();
-    }
+    };
 
     setFormData(initialFormValues);
   };
