@@ -17,6 +17,7 @@ function App() {
   const [booksArray, setBooksArray] = useState([]);
   const [resourcesArray, setResourcesArray] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [dropDown, setDropDown] =useState([])
 
   const location = useLocation();
 
@@ -67,7 +68,7 @@ function App() {
         <Route
           path="/books"
           element={
-            <BooksPage setSearchTerm={setSearchTerm} searchTerm={searchTerm} booksArray={booksArray} setBooksArray={setBooksArray} />
+            <BooksPage setSearchTerm={setSearchTerm} searchTerm={searchTerm} booksArray={booksArray} setBooksArray={setBooksArray} dropDown={dropDown} setDropDown= {setDropDown} />
           }
         />
         <Route
@@ -78,6 +79,8 @@ function App() {
               grammarArray={grammarArray}
               setGrammarArray={setGrammarArray}
               setSearchTerm={setSearchTerm}
+              dropDown={dropDown}
+              setDropDown= {setDropDown}
             />
           }
         />
@@ -95,6 +98,8 @@ function App() {
               setResourcesArray={setResourcesArray}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
+              dropDown={dropDown}
+              setDropDown= {setDropDown}
             ></OtherResourcesPage>
           }
         />

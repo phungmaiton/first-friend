@@ -10,7 +10,9 @@ function OtherResourcesPage({
   resourcesArray, 
   setResourcesArray, 
   searchTerm, 
-  setSearchTerm
+  setSearchTerm,
+  dropDown,
+  setDropDown
 }) {
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,6 +20,7 @@ function OtherResourcesPage({
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = resourcesArray.slice(indexOfFirstPost, indexOfLastPost);
+
 
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
@@ -38,7 +41,11 @@ function OtherResourcesPage({
         background="https://a.cdn-hotels.com/gdcs/production81/d60/e414d9a4-df1b-4e19-976f-b83e8a1b2c8d.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
       />
       <div>
-        <SearchSort setSearchTerm={setSearchTerm} />
+        <SearchSort 
+          setSearchTerm={setSearchTerm} 
+          dropDown={dropDown}
+          setDropDown= {setDropDown} 
+        />
       </div>
       {/* 
       <div className="search container m-auto px-2 pt-10 pb-10">
