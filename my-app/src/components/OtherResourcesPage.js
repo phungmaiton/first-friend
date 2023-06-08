@@ -7,12 +7,12 @@ import PageTransition from "./PageTransition";
 import SearchSort from "./SearchSort";
 
 
-function OtherResourcesPage({ linksArray, setLinksArray, searchTerm, setSearchTerm}) {
+function OtherResourcesPage({ resourcesArray, setResourcesArray, searchTerm, setSearchTerm}) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = linksArray.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = resourcesArray.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
@@ -67,15 +67,15 @@ function OtherResourcesPage({ linksArray, setLinksArray, searchTerm, setSearchTe
               description={link.description}
               image={link.image}
               likes={link.likes}
-              setLinksArray={setLinksArray}
-              linksArray={linksArray}
+              resourcesArray={resourcesArray}
+              setResourcesArray={setResourcesArray}
             />
           ))}
         </div>
 
         <Pagination
           paginate={paginate}
-          array={linksArray}
+          array={resourcesArray}
           postsPerPage={postsPerPage}
         />
       </div>
@@ -84,7 +84,7 @@ function OtherResourcesPage({ linksArray, setLinksArray, searchTerm, setSearchTe
         paginate={paginate}
         linksArray={filteredItems}
         postsPerPage={postsPerPage}
-        setLinksArray={setLinksArray}
+        setResourcesArray={setResourcesArray}
       />
     </PageTransition>
   );
