@@ -59,7 +59,7 @@ function OtherResourcesForm({ resourcesArray, setResourcesArray }) {
     if (resourceExists) {
       failureAlert();
     } else {
-      fetch("http://localhost:3000/other", {
+      fetch("http://localhost:3000/resources", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
