@@ -295,6 +295,7 @@ button.disabled {
 }
 
 .pagination {
+  padding-top: 20px;
   display: flex;
   justify-content: center;
 }
@@ -526,4 +527,97 @@ a.footer-menu:hover {
   .footer-content-right{
     display: none;
   }
+ 
+}
+
+
+
+@media only screen and (max-width: 877px) and (min-width: 375px ) {
+  iframe {
+    height: 350px;
+  }
+  .grammar {
+
+    height: 350px;
+    position: relative
+  }
+  .resources {
+    width:100%;
+    height: 350px;
+    position: relative
+  }
+
+  .book {
+
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+  }
+
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 877px) {
+  iframe{ 
+    height: 400px;
+  }
+
+  .grammar {
+    width:100%;
+    height: 450px;
+    position: relative
+  }
+  .book {
+    width:100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+  }
+  .resources {
+    width:100%;
+    height: 450px;
+    position: relative
+  }
+  
+}
+
+@media only screen and (min-width: 1024px) {
+.grammar {
+  width:100%;
+  height: 200px;
+  position: relative
+}
+.resources {
+  width:100%;
+  height: 200px;
+  position: relative
+}
+
+.book {
+  width:100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+}
+
+.grammar img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resources img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book img {
+  position: absolute;
+  width:100%;
+  object-fit: cover;
+  top: 0;
+  transform: translateY(0)
 }
