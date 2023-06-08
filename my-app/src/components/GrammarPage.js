@@ -1,11 +1,10 @@
 import React from "react";
-import NavBar from "./NavBar";
 import { useState } from "react";
 import GrammarItem from "./GrammarItem";
 import Banner from "./Banner";
 import Pagination from "./Pagination";
 import GrammarForm from "./GrammarForm";
-import Footer from "./Footer";
+import PageTransition from "./PageTransition";
 
 function GrammarPage({ grammarArray, setGrammarArray }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,8 +30,7 @@ function GrammarPage({ grammarArray, setGrammarArray }) {
   });
 
   return (
-    <div>
-      <NavBar />
+    <PageTransition>
       <Banner
         pageTitle="Grammar"
         subTitle="Learn Some Grammar"
@@ -72,8 +70,7 @@ function GrammarPage({ grammarArray, setGrammarArray }) {
         />
       </div>
       <GrammarForm array={grammarArray} setArray={setGrammarArray} />
-      <Footer />
-    </div>
+    </PageTransition>
   );
 }
 

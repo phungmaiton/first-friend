@@ -105,6 +105,14 @@
       "description": "A tried-and-true grammar-based approach that will have you speaking Korean confidently in no time, even if you are an absolute beginner. This book is designed to address the key areas where students frequently struggle. It provides a step-by-step learning method that anyone can follow and will take your Korean to new heights!",
       "purchaseUrl": "https://www.barnesandnoble.com/w/korean-grammar-for-beginners-fluent-in-korean/1143322029",
       "likes": 6
+    },
+    {
+      "name": "Organic Korean: Simple and Pure Korean",
+      "description": "‘Organic Korean’ is made up of 8 units, with a total of 50 daily lessons. Each unit study focuses on a specific topic and includes up to 8 related subtopics.",
+      "image": "https://m.media-amazon.com/images/I/51w26AlRAqL._SX331_BO1,204,203,200_.jpg",
+      "purchaseUrl": "https://www.amazon.com/Organic-Korean-Simple-Upper-Beginners/dp/B0BGKQTTGJ",
+      "likes": 1,
+      "id": 7
     }
   ],
   "videos": [
@@ -235,7 +243,7 @@
       "description": "Talk to the World! Learn a language for free by chatting with native speakers around the world!",
       "image": "https://ali-global-cdn.hellotalk8.com/www/image/partner/show.png",
       "link": "https://www.hellotalk.com/partners/Korean-Language-Exchange?lang=en",
-      "likes": 1
+      "likes": 2
     },
     {
       "id": 5,
@@ -260,6 +268,14 @@
       "image": "https://www.90daykorean.com/wp-content/uploads/2018/08/90dk-logo-small-1.png",
       "link": "https://www.90daykorean.com/learn-korean-fast-tips/",
       "likes": 1
+    },
+    {
+      "name": "Naver Papago",
+      "description": "Naver Papago, shortened to Papago and stylized as papago, is a multilingual machine translation cloud service provided by Naver Corporation.",
+      "image": "https://img.hani.co.kr/imgdb/resize/2017/0720/150044884517_20170720.JPG",
+      "link": "https://papago.naver.com/",
+      "likes": 1,
+      "id": 8
     }
   ]
 }

@@ -1,11 +1,10 @@
 import React from "react";
-import NavBar from "./NavBar";
 import { useState } from "react";
 import Banner from "./Banner";
 import VideoSection from "./VideoSection";
 import Pagination from "./Pagination";
 import VideoForm from "./VideoForm";
-import Footer from "./Footer";
+import PageTransition from "./PageTransition";
 
 function VideoPage({ videoArray, setVideoArray }) {
   const [postsPerPage] = useState(3);
@@ -67,8 +66,7 @@ function VideoPage({ videoArray, setVideoArray }) {
   );
 
   return (
-    <div>
-      <NavBar />
+    <PageTransition>
       <Banner
         pageTitle="Videos"
         subTitle="Watch Some Videos"
@@ -106,8 +104,7 @@ function VideoPage({ videoArray, setVideoArray }) {
         />
       </div>
       <VideoForm array={videoArray} setArray={setVideoArray} />
-      <Footer />
-    </div>
+    </PageTransition>
   );
 }
 

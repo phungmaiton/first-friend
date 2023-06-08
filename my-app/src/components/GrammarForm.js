@@ -63,6 +63,7 @@ function GrammarForm({ array, setArray }) {
             placeholder="Title"
             value={formData.name}
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -70,6 +71,7 @@ function GrammarForm({ array, setArray }) {
             placeholder="Description"
             value={formData.description}
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -77,6 +79,7 @@ function GrammarForm({ array, setArray }) {
             placeholder="Image URL"
             value={formData.image}
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -84,6 +87,7 @@ function GrammarForm({ array, setArray }) {
             placeholder="Resource Link"
             value={formData.link}
             onChange={handleInputChange}
+            required
           />
           <button type="submit">Add</button>
         </form>

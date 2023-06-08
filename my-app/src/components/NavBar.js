@@ -9,25 +9,15 @@ function NavBar() {
         <img id="logo" src="./main-logo.png" alt="logo" />
       </NavLink>
       <input id="menu-toggle" type="checkbox" />
-      <label class="menu-button-container" for="menu-toggle">
-        <div class="menu-button"></div>
+      <label className="menu-button-container" htmlFor="menu-toggle">
+        <div className="menu-button"></div>
       </label>
       <div className="menu">
-        <NavLink to="/" activeClassName="active">
-          HOME
-        </NavLink>
-        <NavLink to="/books" activeClassName="active">
-          BOOKS
-        </NavLink>
-        <NavLink to="/grammar" activeClassName="active">
-          GRAMMAR
-        </NavLink>
-        <NavLink to="/videos" activeClassName="active">
-          VIDEOS
-        </NavLink>
-        <NavLink to="/other" activeClassName="active">
-          OTHER RESOURCES
-        </NavLink>
+        <NavLink to="/">HOME</NavLink>
+        <NavLink to="/books">BOOKS</NavLink>
+        <NavLink to="/grammar">GRAMMAR</NavLink>
+        <NavLink to="/videos">VIDEOS</NavLink>
+        <NavLink to="/other">OTHER RESOURCES</NavLink>
       </div>
       {/* </div> */}
     </nav>

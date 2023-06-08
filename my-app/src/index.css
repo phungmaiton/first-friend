@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-  background-color: #FFFAF7;
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -13,9 +14,21 @@ body {
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  
+  overflow-x:hidden;
+
 }
 
+.App {
+  height: 100vh;
+  width: 100vw;
+  display:flex;
+  flex-direction: column;
+}
+
+.page {  
+  background-color: #FFFAF7;
+  
+}
 @keyframes fadeInAnimation {
   0% {
       opacity: 0;
@@ -183,7 +196,7 @@ code {
   .menu {
     position: absolute;
     top: 0;
-    margin-top: 110px;
+    margin-top: 105px;
     left: 0;
     flex-direction: column;
     width: 100%;
@@ -198,7 +211,7 @@ code {
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   #menu-toggle:checked ~ .menu a {
-    /* border: 1px solid #333; */
+    border: 1px solid #FFFAF7;
     height: 2.5em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -336,6 +349,15 @@ select {
   padding: 20px; 
 }
 
+.form button {
+  background-color: #778AC6;
+  transition: background-color .3s;
+}
+
+.form button:hover {
+  background-color: #D8766D;
+}
+
 /* Learn More */
 
 .learn-more {
@@ -414,6 +436,7 @@ select {
   height: 70px;
   background-color: #778AC6;
   color: white;
+  
 }
 .footer-text-left {
   font-size:16px;
@@ -433,8 +456,12 @@ a.footer-menu:hover {
   padding-right:40px;
   margin-top:20px;
   float:right;
+
 }
 
+.footer > a {
+  overflow: hidden;
+}
 
 .home-divider {
   border-bottom: 0.25rem solid #D8766D;
@@ -481,4 +508,22 @@ a.footer-menu:hover {
   border-color: #D8766D;
   outline:none;
 
+}
+
+/* mobile optimization */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 25pt;
+    line-height: 1.2em;
+  }
+  h3 {
+    font-size: 16pt;
+  }
+
+}
+
+@media only screen and (max-width: 877px) {
+  .footer-content-right{
+    display: none;
+  }
 }

@@ -1,11 +1,10 @@
 import React from "react";
-import NavBar from "./NavBar";
 import { useState } from "react";
 import BookItem from "./BookItem";
 import Banner from "./Banner";
 import Pagination from "./Pagination";
 import BookForm from "./BookForm";
-import Footer from "./Footer";
+import PageTransition from "./PageTransition";
 
 function BooksPage({ booksArray, setBooksArray }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,8 +30,7 @@ function BooksPage({ booksArray, setBooksArray }) {
   });
 
   return (
-    <div>
-      <NavBar />
+    <PageTransition>
       <Banner
         pageTitle="Books"
         subTitle="Read Some Books"
@@ -72,8 +70,7 @@ function BooksPage({ booksArray, setBooksArray }) {
         />
       </div>
       <BookForm array={booksArray} setArray={setBooksArray} />
-      <Footer />
-    </div>
+    </PageTransition>
   );
 }
 

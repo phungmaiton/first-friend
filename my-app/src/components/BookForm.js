@@ -31,7 +31,9 @@ function BookForm({ array, setArray }) {
       likes: 0,
     };
 
-    const resourceExists = array.some((item) => item.link === formData.link);
+    const resourceExists = array.some(
+      (item) => item.purchaseUrl === formData.link
+    );
 
     if (resourceExists) {
       alert("This resource already exists!");
@@ -63,6 +65,7 @@ function BookForm({ array, setArray }) {
             placeholder="Title"
             value={formData.name}
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -70,6 +73,7 @@ function BookForm({ array, setArray }) {
             placeholder="Description"
             value={formData.description}
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -77,6 +81,7 @@ function BookForm({ array, setArray }) {
             placeholder="Image URL"
             value={formData.image}
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -84,6 +89,7 @@ function BookForm({ array, setArray }) {
             placeholder="Purchase Link"
             value={formData.purchaseUrl}
             onChange={handleInputChange}
+            required
           />
           <button type="submit">Add</button>
         </form>

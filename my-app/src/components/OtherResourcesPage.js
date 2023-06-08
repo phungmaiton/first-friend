@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import NavBar from "./NavBar";
 import Banner from "./Banner";
 import Pagination from "./Pagination";
 import OtherResourcesItem from "./OtherResourcesItem";
 import OtherResourcesForm from "./OtherResourcesForm";
-import Footer from "./Footer";
+import PageTransition from "./PageTransition";
 
 function OtherResourcesPage({ linksArray, setLinksArray }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,8 +29,7 @@ function OtherResourcesPage({ linksArray, setLinksArray }) {
   });
 
   return (
-    <div>
-      <NavBar />
+    <PageTransition>
       <Banner
         pageTitle="Other Resources"
         subTitle="Find Some Tips and Tricks"
@@ -77,8 +75,7 @@ function OtherResourcesPage({ linksArray, setLinksArray }) {
         postsPerPage={postsPerPage}
         setLinksArray={setLinksArray}
       />
-      <Footer />
-    </div>
+    </PageTransition>
   );
 }
 
