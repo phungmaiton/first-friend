@@ -3,11 +3,11 @@ import OtherResourcesItem from "./OtherResourcesItem";
 
 function PopularResources({ topThreeResources, linksArray, setLinksArray }) {
   return (
-    <div className="container m-auto px-2 pt-10">
-        <h2 className="home-divider">
-            <span className="home-divider-textbox">Popular Resources</span>
-        </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-3 gap-10">
+    <div className="main-div">
+      <h2 className="home-divider">
+        <span className="home-divider-textbox">Popular Resources</span>
+      </h2>
+      <div className="column-div">
         {topThreeResources.map((link) => (
           <OtherResourcesItem
             link={link}

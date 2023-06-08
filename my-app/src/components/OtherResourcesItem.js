@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 
 function OtherResourcesItem({
   link,
-  key,
   id,
   name,
   description,
@@ -47,12 +46,14 @@ function OtherResourcesItem({
     <div>
       <Card
         sx={{
-          maxWidth: 488,
+          maxWidth: 736,
           minHeight: 410,
           marginBottom: "20px",
         }}
       >
-        <CardMedia sx={{ height: 200 }} image={image} name={name} />
+        <div className="card-media resources">
+          <img src={image} />
+        </div>
         <div className="card-content">
           <div className="likes">
             <a className="like-button" onClick={handleClick}>
