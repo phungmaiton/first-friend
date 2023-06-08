@@ -9,12 +9,14 @@ import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import SearchSort from "./SearchSort";
 
 function App() {
   const [grammarArray, setGrammarArray] = useState([]);
   const [videoArray, setVideoArray] = useState([]);
   const [booksArray, setBooksArray] = useState([]);
   const [linksArray, setLinksArray] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const location = useLocation();
 
@@ -57,21 +59,25 @@ function App() {
               setGrammarArray={setGrammarArray}
               videoArray={videoArray}
               setVideoArray={setVideoArray}
+              linksArray={linksArray}
+              setLinksArray={setLinksArray}
             />
           }
         />
         <Route
           path="/books"
           element={
-            <BooksPage booksArray={booksArray} setBooksArray={setBooksArray} />
+            <BooksPage setSearchTerm={setSearchTerm} searchTerm={searchTerm} booksArray={booksArray} setBooksArray={setBooksArray} />
           }
         />
         <Route
           path="/grammar"
           element={
             <GrammarPage
+              searchTerm={searchTerm}
               grammarArray={grammarArray}
               setGrammarArray={setGrammarArray}
+              setSearchTerm={setSearchTerm}
             />
           }
         />
@@ -87,10 +93,13 @@ function App() {
             <OtherResourcesPage
               linksArray={linksArray}
               setLinksArray={setLinksArray}
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
             ></OtherResourcesPage>
           }
         />
       </Routes>
+      {/* <SearchSort setSearchTerm={setSearchTerm} /> */}
       <AnimatePresence />
       <Footer />
     </div>

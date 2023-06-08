@@ -42,7 +42,7 @@ function VideoItem({
 
   return (
     <div>
-      <Card sx={{ maxWidth: 488, minHeight: 320 }}>
+      <Card sx={{ maxWidth: 736, minHeight: 320 }}>
         <CardMedia>
           <iframe
             width="100%"

@@ -45,7 +45,7 @@ function VideoForm({ array, setArray }) {
     };
 
     const resourceExists = array.some(
-      (item) => item.link === formData.videoUrl
+      (item) => item.videoUrl === formData.videoUrl
     );
 
     if (resourceExists) {

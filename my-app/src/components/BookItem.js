@@ -3,7 +3,6 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
-
 function BookItem({
   image,
   title,
@@ -19,7 +18,6 @@ function BookItem({
   function handleDescClick() {
     setShowFullDescription((showFullDescription) => !showFullDescription);
   }
-
 
   const [isLiked, setIsLiked] = useState(false);
 
@@ -49,8 +47,10 @@ function BookItem({
 
   return (
     <div>
-      <Card sx={{ maxWidth: 488, minHeight: 410, marginBottom: "20px" }}>
-        <CardMedia sx={{ height: 250 }} image={image} />
+      <Card sx={{ maxWidth: 736, minHeight: 410, marginBottom: "20px" }}>
+        <div className="card-media book">
+          <img src={image} />
+        </div>
         <div className="card-content">
           <div className="likes">
             <a className="like-button" onClick={handleClick}>

@@ -87,6 +87,8 @@ function VideoPage({ videoArray, setVideoArray }) {
         <VideoSection
           sectionTitle="Motivational Videos"
           filteredArray={currentMotivationVideos}
+          videoArray={videoArray}
+          setVideoArray={setVideoArray}
         />
         <Pagination
           paginate={paginateMotivational}
@@ -96,6 +98,8 @@ function VideoPage({ videoArray, setVideoArray }) {
         <VideoSection
           sectionTitle="Entertainment Videos"
           filteredArray={currentEntertainmentVideos}
+          videoArray={videoArray}
+          setVideoArray={setVideoArray}
         />
         <Pagination
           paginate={paginateEntertainment}
