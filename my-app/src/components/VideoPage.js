@@ -69,7 +69,7 @@ function VideoPage({ videoArray, setVideoArray }) {
     <PageTransition>
       <Banner
         pageTitle="Videos"
-        subTitle="Watch Some Videos"
+        subTitle="Immerse yourself in Korean language and culture."
         background="https://www.gsma.com/newsroom/wp-content/uploads//Korean-Mobile-IoT.jpg"
       />
       <div className="container m-auto px-2 mt-10 mb-20">
