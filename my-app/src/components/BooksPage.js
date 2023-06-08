@@ -7,7 +7,6 @@ import BookForm from "./BookForm";
 import PageTransition from "./PageTransition";
 import SearchSort from "./SearchSort";
 
-
 function BooksPage({ booksArray, setBooksArray, searchTerm, setSearchTerm }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
@@ -15,12 +14,9 @@ function BooksPage({ booksArray, setBooksArray, searchTerm, setSearchTerm }) {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = booksArray.slice(indexOfFirstPost, indexOfLastPost);
 
-
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
   };
-
-
 
   const filteredItems = currentPosts.filter((book) => {
     return (
@@ -37,7 +33,7 @@ function BooksPage({ booksArray, setBooksArray, searchTerm, setSearchTerm }) {
         background="https://a.cdn-hotels.com/gdcs/production158/d375/8bd96051-345f-497d-90ae-caa8a2a14983.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
       />
       <div>
-        <SearchSort setSearchTerm={setSearchTerm}/>
+        <SearchSort setSearchTerm={setSearchTerm} />
       </div>
       {/* <div className="search container m-auto px-2 pt-10 pb-10">
         <input
@@ -67,7 +63,7 @@ function BooksPage({ booksArray, setBooksArray, searchTerm, setSearchTerm }) {
         </div>
         <Pagination
           paginate={paginate}
-          array={filteredItems}
+          array={booksArray}
           postsPerPage={postsPerPage}
         />
       </div>

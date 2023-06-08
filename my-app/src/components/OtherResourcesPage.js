@@ -6,8 +6,12 @@ import OtherResourcesForm from "./OtherResourcesForm";
 import PageTransition from "./PageTransition";
 import SearchSort from "./SearchSort";
 
-
-function OtherResourcesPage({ linksArray, setLinksArray, searchTerm, setSearchTerm}) {
+function OtherResourcesPage({
+  linksArray,
+  setLinksArray,
+  searchTerm,
+  setSearchTerm,
+}) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const indexOfLastPost = currentPage * postsPerPage;
@@ -18,15 +22,11 @@ function OtherResourcesPage({ linksArray, setLinksArray, searchTerm, setSearchTe
     setCurrentPage(selected + 1);
   };
 
-
   const filteredItems = currentPosts.filter((link) => {
     return (
       link.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       link.description.toLowerCase().includes(searchTerm.toLowerCase())
     );
-
-
-
   });
 
   return (
@@ -37,9 +37,9 @@ function OtherResourcesPage({ linksArray, setLinksArray, searchTerm, setSearchTe
         background="https://a.cdn-hotels.com/gdcs/production81/d60/e414d9a4-df1b-4e19-976f-b83e8a1b2c8d.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
       />
       <div>
-        <SearchSort setSearchTerm={setSearchTerm}/>
+        <SearchSort setSearchTerm={setSearchTerm} />
       </div>
-{/* 
+      {/* 
       <div className="search container m-auto px-2 pt-10 pb-10">
         <input
           onChange={handleChange}
