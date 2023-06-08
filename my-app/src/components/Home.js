@@ -14,8 +14,7 @@ function Home({
   booksArray,
   setBooksArray,
   linksArray,
-  setLinksArray
-
+  setLinksArray,
 }) {
   const topThreeGrammar = grammarArray
     .sort((a, b) => b.likes - a.likes)
