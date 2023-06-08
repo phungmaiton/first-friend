@@ -6,6 +6,8 @@ function SearchSort ({setSearchTerm}) {
     function handleChange(e) {
     setSearchTerm(e.target.value);
   }
+
+
   
     return (
         <div className="search container m-auto px-2 pt-10 pb-10">
@@ -15,6 +17,7 @@ function SearchSort ({setSearchTerm}) {
                 className='searchTerm'
                 placeholder="Search..."/>
         </div>
+     
     )
 }
 
