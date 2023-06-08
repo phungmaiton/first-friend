@@ -3,11 +3,11 @@ import BookItem from "./BookItem";
 
 function PopularBooks({ topThreeBooks, booksArray, setBooksArray }) {
   return (
-    <div className="container m-auto px-2 pt-10">
+    <div className="main-div">
       <h2 className="home-divider">
         <span className="home-divider-textbox">Popular Books</span>
       </h2>
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 gap-10">
+      <div className="column-div">
         {topThreeBooks.map((book) => (
           <BookItem
             book={book}

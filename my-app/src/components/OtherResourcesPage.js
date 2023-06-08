@@ -46,7 +46,7 @@ function OtherResourcesPage({ linksArray, setLinksArray }) {
       </div>
 
       <div className="container m-auto px-2 pb-20">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 gap-10 ">
+        <div className="column-div">
           {filteredItems.map((link) => (
             <OtherResourcesItem
               link={link}

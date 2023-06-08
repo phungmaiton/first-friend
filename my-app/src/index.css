@@ -87,25 +87,11 @@ code {
   padding: 0 50px;
 }
 
-/* .topnav a {
-  color: #0e0e0e;
-  text-align: center;
-  padding: 0 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 50px;
-  height: 110px;      
-  line-height: 110px;
-  transition: font-weight .3s;
-} */
 
 #logo {
   display: inline-block;
   vertical-align: top;
   height: 100px;
-  /* margin-right: 50px; */
   margin-top: 5px; 
 }
 
@@ -620,4 +606,13 @@ a.footer-menu:hover {
   object-fit: cover;
   top: 0;
   transform: translateY(0)
+}
+
+
+.column-div {
+  @apply grid grid-cols-1 gap-8 lg:grid-cols-3 gap-10
+}
+
+.main-div {
+  @apply container m-auto px-2 pt-10
 }
