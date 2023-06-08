@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import PopularGrammar from "./PopularGrammar";
 import PopularVideos from "./PopularVideos";
 import PopularBooks from "./PopularBooks";
+import PopularResources from "./PopularResources";
 import PageTransition from "./PageTransition";
 
 function Home({
@@ -12,6 +13,9 @@ function Home({
   setVideoArray,
   booksArray,
   setBooksArray,
+  linksArray,
+  setLinksArray
+
 }) {
   const topThreeGrammar = grammarArray
     .sort((a, b) => b.likes - a.likes)
@@ -22,6 +26,10 @@ function Home({
     .slice(0, 3);
 
   const topThreeBooks = booksArray
+    .sort((a, b) => b.likes - a.likes)
+    .slice(0, 3);
+
+  const topThreeResources = linksArray
     .sort((a, b) => b.likes - a.likes)
     .slice(0, 3);
 
@@ -52,6 +60,14 @@ function Home({
             topThreeVideos={topThreeVideos}
             videoArray={videoArray}
             setVideoArray={setVideoArray}
+          />
+        </div>
+
+        <div className="color-background-section">
+          <PopularResources
+            topThreeResources={topThreeResources}
+            linksArray={linksArray}
+            setLinksArray={setLinksArray}
           />
         </div>
       </div>

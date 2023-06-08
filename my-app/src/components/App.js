@@ -57,6 +57,8 @@ function App() {
               setGrammarArray={setGrammarArray}
               videoArray={videoArray}
               setVideoArray={setVideoArray}
+              linksArray={linksArray}
+              setLinksArray={setLinksArray}
             />
           }
         />
