@@ -6,7 +6,7 @@
       "description": "The Korean sentence typically consists of the : Subject - Object - Predicate(verb) Or Subject - Adjective",
       "image": "https://www.topikguide.com/wp-content/uploads/2022/02/TG-website-86.jpg",
       "link": "https://www.topikguide.com/korean-sentence-structure/",
-      "likes": 8
+      "likes": 9
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "description": "One of the characteristics of Korean verbs and adjectives is that they both are conjugated according to tense, speech level, passive and causative forms, and speech styles.",
       "image": "https://www.topikguide.com/wp-content/uploads/2022/02/TG-website-87.jpg",
       "link": "https://www.topikguide.com/korean-conjugation/",
-      "likes": 13
+      "likes": 15
     },
     {
       "id": 3,
@@ -64,7 +64,7 @@
       "name": "Talk To Me In Korean Level 1",
       "description": "Learn Korean More Effectively with Our Core Grammar Lessons! From saying the basic greetings, to counting numbers, and to having simple yet natural conversations in Korean, you can learn the basics of the Korean language with this textbook.",
       "purchaseUrl": "https://talktomeinkorean.com/product/gr1/",
-      "likes": 16
+      "likes": 19
     },
     {
       "id": 2,
@@ -72,7 +72,7 @@
       "name": "Korean Made Simple",
       "description": "Korean Made Simple is a book for anyone who wishes to begin learning the Korean language. No matter your age, you can learn how to read, write, speak and understand Korean. Learn the Korean writing system, Korean culture, and even history. Learn over 1,000 vocabulary words and phrases through 20 in-depth and fun lessons, filled with plenty of examples. Additionally, practice sections with answer keys are built into every chapter. This book also contains additional advanced level notes for more skilled Korean speakers looking for a review of basic grammar and concepts, including a full appendix covering sound change rules. Start your exciting journey into the Korean language today. Let's learn Korean!",
       "purchaseUrl": "https://gobillykorean.com/korean-made-simple/",
-      "likes": 13
+      "likes": 15
     },
     {
       "id": 3,
@@ -80,7 +80,7 @@
       "name": "Read and Speak Korean for Beginners",
       "description": "Learning a new language can be especially challenging when the language uses a non-Roman script. Read and Speak Korean for Beginners, 3rd Edition overcomes this obstacle by providing an accessible, entertaining program to reinforce vocabulary and help you create basic structures. Each of the book’s eight topics was designed to help you develop your communication skills in key areas of daily life, such as introducing yourself, asking for directions, talking about your family and your country, and describing people, places, and objects.",
       "purchaseUrl": "https://www.amazon.com/Read-Speak-Korean-Beginners-Third/dp/1260031039/ref=sr_1_1?keywords=read+and+speak+korean+for+beginners&qid=1685748777&s=books&sprefix=read+and+speak+korean%2Cstripbooks%2C128&sr=1-1",
-      "likes": 2
+      "likes": 3
     },
     {
       "id": 4,
@@ -96,7 +96,7 @@
       "name": "Learn Korean",
       "description": "This Korean book is suitable for adults and kids, from total beginners to those looking to improve their writing Hangul writing skills. Our self-study exercises and how-to-write style practice pages will simplify the whole process for elementary and intermediate level Korean. Your tutor, Jennie Lee, will teach you everything you need to know about the Hangul script, with just enough detail to get started quickly! Features: a comprehensive overview of the pronunciation rules, a large section of beginner vocabulary for practice, a guide to reading and writing numbers in Korean, understanding native handwriting, and more!",
       "purchaseUrl": "https://www.barnesandnoble.com/w/learn-korean-the-language-workbook-for-beginners-jennie-lee/1139047291",
-      "likes": 11
+      "likes": 12
     },
     {
       "id": 6,
@@ -129,7 +129,7 @@
       "name": "how to get motivated to study korean (and actually enjoy it!)",
       "description": "Tips and Skills to help you get and stay motivated while learning Korean",
       "videoUrl": "https://www.youtube.com/embed/4LHkMR7vsXk",
-      "likes": 1,
+      "likes": 3,
       "category": "motivation"
     },
     {
@@ -161,7 +161,7 @@
       "name": "(CC) 【중급말하기】 01.성격(Personality) 성격이 급해 가지고 실수를 많이 해요",
       "description": "여러분은 어떤 성격이에요? 성격에 대한 대화를 같이 들어봐요!",
       "videoUrl": "https://www.youtube.com/embed/gG4uudNP9jw",
-      "likes": 235,
+      "likes": 236,
       "category": "listening"
     },
     {
@@ -169,7 +169,7 @@
       "name": "(Kr/Eng:CC)(자막) 【한국어 말하기】 주말에 뭐 해요? Real Korean Speaking",
       "description": "여러분은, 휴일을 어떻게 보내시나요? 같이 이야기해 봐요!",
       "videoUrl": "https://www.youtube.com/embed/0CZRKFlQekU",
-      "likes": 246,
+      "likes": 247,
       "category": "listening"
     },
     {
@@ -177,7 +177,7 @@
       "name": "Korean Expression and tip for travel in Korea 👄 Speaking in Korean",
       "description": "오늘은 한국을 여행할 때 사용할 수 있는 한국어 표현과 한국 여행 팁을 소개합니다.",
       "videoUrl": "https://www.youtube.com/embed/bMDAIfTKTiE",
-      "likes": 340,
+      "likes": 342,
       "category": "listening"
     },
     {
@@ -185,7 +185,7 @@
       "name": "Practising Korean with Random People Online...!?😱",
       "description": "Today Ollie tries his Jolly best to practise his Korean with some random people online...",
       "videoUrl": "https://www.youtube.com/embed/hBvDFOB3DKc",
-      "likes": 5,
+      "likes": 8,
       "category": "entertainment"
     },
     {
@@ -207,9 +207,16 @@
     {
       "name": "Korean Podcast for Beginners 01 : 취미 생활 Hobbies",
       "videoUrl": "https://www.youtube.com/embed/GnwIG51ah7k",
-      "likes": 0,
+      "likes": 1,
       "category": "listening",
       "id": 12
+    },
+    {
+      "name": "Learn KOREAN with Blackpink in 2 minutes",
+      "videoUrl": "https://www.youtube.com/embed/KJmZZ2_wZeM",
+      "likes": 0,
+      "category": "entertainment",
+      "id": 13
     }
   ],
   "other": [
@@ -231,7 +238,7 @@
     },
     {
       "id": 3,
-      "name": "111 Core Korean words",
+      "name": "111 Core Korean Words",
       "description": "Basic Korean Words You Need to Learn First",
       "image": "https://www.fluentin3months.com/wp-content/uploads/2022/09/korean-words.jpg",
       "link": "https://www.fluentin3months.com/korean-words/",
