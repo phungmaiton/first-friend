@@ -33,7 +33,7 @@ function BooksPage({ booksArray, setBooksArray }) {
     <PageTransition>
       <Banner
         pageTitle="Books"
-        subTitle="Read Some Books"
+        subTitle="Expand your Korean language library."
         background="https://a.cdn-hotels.com/gdcs/production158/d375/8bd96051-345f-497d-90ae-caa8a2a14983.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
       />
 

@@ -33,7 +33,7 @@ function GrammarPage({ grammarArray, setGrammarArray }) {
     <PageTransition>
       <Banner
         pageTitle="Grammar"
-        subTitle="Learn Some Grammar"
+        subTitle="Build your Korean language knowledge."
         background="https://a.cdn-hotels.com/gdcs/production125/d653/a01517ea-0ec0-4639-b862-33922c62f04a.jpg"
       />
 
