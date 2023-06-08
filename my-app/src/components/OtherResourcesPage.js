@@ -25,10 +25,10 @@ function OtherResourcesPage({
     setCurrentPage(selected + 1);
   };
 
-  const filteredItems = currentPosts.filter((link) => {
+  const filteredItems = currentPosts.filter((resource) => {
     return (
-      link.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      link.description.toLowerCase().includes(searchTerm.toLowerCase())
+      resource.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      resource.description.toLowerCase().includes(searchTerm.toLowerCase())
     );
   });
 
@@ -61,15 +61,16 @@ function OtherResourcesPage({
 
       <div className="container m-auto px-2 pb-20">
         <div className="column-div">
-          {filteredItems.map((link) => (
+          {filteredItems.map((resource) => (
             <OtherResourcesItem
-              link={link}
-              key={link.id}
-              id={link.id}
-              name={link.name}
-              description={link.description}
-              image={link.image}
-              likes={link.likes}
+              resource={resource}
+              link={resource.link}
+              key={resource.id}
+              id={resource.id}
+              name={resource.name}
+              description={resource.description}
+              image={resource.image}
+              likes={resource.likes}
               resourcesArray={resourcesArray}
               setResourcesArray={setResourcesArray}
             />
@@ -85,7 +86,7 @@ function OtherResourcesPage({
 
       <OtherResourcesForm
         paginate={paginate}
-        linksArray={filteredItems}
+        resourcesArray={filteredItems}
         postsPerPage={postsPerPage}
         setResourcesArray={setResourcesArray}
       />

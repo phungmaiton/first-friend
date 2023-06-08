@@ -10,8 +10,8 @@ function OtherResourcesItem({
   description,
   image,
   likes,
-  setLinksArray,
-  linksArray,
+  setResourcesArray,
+  resourcesArray,
 }) {
   const [showFullDescription, setShowFullDescription] = useState(false);
   function handleDescClick() {
@@ -35,11 +35,11 @@ function OtherResourcesItem({
       body: JSON.stringify(updateObj),
     })
       .then((resp) => resp.json())
-      .then((updatedLinks) => {
-        const newLinksArray = linksArray.map((link) =>
-          link.id === id ? updatedLinks : link
+      .then((updatedResources) => {
+        const newResourcesArray = resourcesArray.map((resource) =>
+        resource.id === id ? updatedResources : resource
         );
-        setLinksArray(newLinksArray);
+        setResourcesArray(newResourcesArray);
       });
   };
   return (
