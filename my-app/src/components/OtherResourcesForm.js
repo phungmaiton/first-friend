@@ -6,7 +6,7 @@ import JSConfetti from 'js-confetti';
 const jsConfetti = new JSConfetti()
 
 function scrollToTop() {
-  window.scrollTo(0, 0);
+  window.scrollTo(0, 395);
 };
 
 function failureAlert() {
