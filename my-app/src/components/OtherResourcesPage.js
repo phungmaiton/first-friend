@@ -4,28 +4,29 @@ import Pagination from "./Pagination";
 import OtherResourcesItem from "./OtherResourcesItem";
 import OtherResourcesForm from "./OtherResourcesForm";
 import PageTransition from "./PageTransition";
+import SearchSort from "./SearchSort";
 
-function OtherResourcesPage({ linksArray, setLinksArray }) {
+
+function OtherResourcesPage({ linksArray, setLinksArray, searchTerm, setSearchTerm}) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = linksArray.slice(indexOfFirstPost, indexOfLastPost);
-  const [searchTerm, setSearchTerm] = useState("");
 
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
   };
 
-  function handleChange(e) {
-    setSearchTerm(e.target.value);
-  }
 
   const filteredItems = currentPosts.filter((link) => {
     return (
       link.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       link.description.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+
+
   });
 
   return (
@@ -35,7 +36,10 @@ function OtherResourcesPage({ linksArray, setLinksArray }) {
         subTitle="Elevate your Korean language skills with various resources."
         background="https://a.cdn-hotels.com/gdcs/production81/d60/e414d9a4-df1b-4e19-976f-b83e8a1b2c8d.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
       />
-
+      <div>
+        <SearchSort setSearchTerm={setSearchTerm}/>
+      </div>
+{/* 
       <div className="search container m-auto px-2 pt-10 pb-10">
         <input
           onChange={handleChange}
@@ -44,6 +48,13 @@ function OtherResourcesPage({ linksArray, setLinksArray }) {
           placeholder="Search..."
         />
       </div>
+
+      <div>
+        <select
+        onChange = {handleDropDown}
+        placeholder="Select"
+        />
+      </div> */}
 
       <div className="container m-auto px-2 pb-20">
         <div className="column-div">
@@ -71,7 +82,7 @@ function OtherResourcesPage({ linksArray, setLinksArray }) {
 
       <OtherResourcesForm
         paginate={paginate}
-        linksArray={linksArray}
+        linksArray={filteredItems}
         postsPerPage={postsPerPage}
         setLinksArray={setLinksArray}
       />
