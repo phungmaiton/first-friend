@@ -96,7 +96,7 @@
       "name": "Learn Korean",
       "description": "This Korean book is suitable for adults and kids, from total beginners to those looking to improve their writing Hangul writing skills. Our self-study exercises and how-to-write style practice pages will simplify the whole process for elementary and intermediate level Korean. Your tutor, Jennie Lee, will teach you everything you need to know about the Hangul script, with just enough detail to get started quickly! Features: a comprehensive overview of the pronunciation rules, a large section of beginner vocabulary for practice, a guide to reading and writing numbers in Korean, understanding native handwriting, and more!",
       "purchaseUrl": "https://www.barnesandnoble.com/w/learn-korean-the-language-workbook-for-beginners-jennie-lee/1139047291",
-      "likes": 12
+      "likes": 15
     },
     {
       "id": 6,
@@ -104,7 +104,7 @@
       "name": "Korean Grammar for Beginners",
       "description": "A tried-and-true grammar-based approach that will have you speaking Korean confidently in no time, even if you are an absolute beginner. This book is designed to address the key areas where students frequently struggle. It provides a step-by-step learning method that anyone can follow and will take your Korean to new heights!",
       "purchaseUrl": "https://www.barnesandnoble.com/w/korean-grammar-for-beginners-fluent-in-korean/1143322029",
-      "likes": 6
+      "likes": 7
     },
     {
       "name": "Organic Korean: Simple and Pure Korean",
@@ -121,7 +121,9 @@
       "name": "My Korean language journey",
       "description": "In this video I talk about how I learned Korean and what my struggles have been while learning the language. I speak Korean with my husband and at work, but that doesn't mean that it's always easy.",
       "videoUrl": "https://www.youtube.com/embed/jaWiplHX6MQ",
-      "likes": 2,
+
+      "likes": 3,
+
       "category": "motivation"
     },
     {
@@ -129,7 +131,7 @@
       "name": "how to get motivated to study korean (and actually enjoy it!)",
       "description": "Tips and Skills to help you get and stay motivated while learning Korean",
       "videoUrl": "https://www.youtube.com/embed/4LHkMR7vsXk",
-      "likes": 3,
+      "likes": 7,
       "category": "motivation"
     },
     {
@@ -145,7 +147,7 @@
       "name": "Update on my Korean...2 years later",
       "description": "In this video, I react to my first EVER video speaking Korean on my channel, and recreate that 2 years later. ",
       "videoUrl": "https://www.youtube.com/embed/v8jKLjZrAzM",
-      "likes": 1,
+      "likes": 2,
       "category": "motivation"
     },
     {

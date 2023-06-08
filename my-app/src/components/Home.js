@@ -13,8 +13,10 @@ function Home({
   setVideoArray,
   booksArray,
   setBooksArray,
+
   resourcesArray,
   setResourcesArray
+
 
 }) {
   const topThreeGrammar = grammarArray

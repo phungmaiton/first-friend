@@ -1,5 +1,20 @@
 import React from "react";
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+function failureAlert() {
+    toast.warning("This resource already exists!", {
+      position: "bottom-center",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+    })
+}
 
 function GrammarForm({ array, setArray }) {
   const initialFormValues = {
@@ -34,7 +49,7 @@ function GrammarForm({ array, setArray }) {
     const resourceExists = array.some((item) => item.link === formData.link);
 
     if (resourceExists) {
-      alert("This resource already exists!");
+      failureAlert();
     } else {
       fetch("http://localhost:3000/grammar", {
         method: "POST",
@@ -92,6 +107,7 @@ function GrammarForm({ array, setArray }) {
           <button type="submit">Add</button>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 }

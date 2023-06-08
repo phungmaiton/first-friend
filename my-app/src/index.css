@@ -87,25 +87,11 @@ code {
   padding: 0 50px;
 }
 
-/* .topnav a {
-  color: #0e0e0e;
-  text-align: center;
-  padding: 0 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 50px;
-  height: 110px;      
-  line-height: 110px;
-  transition: font-weight .3s;
-} */
 
 #logo {
   display: inline-block;
   vertical-align: top;
   height: 100px;
-  /* margin-right: 50px; */
   margin-top: 5px; 
 }
 
@@ -295,6 +281,7 @@ button.disabled {
 }
 
 .pagination {
+  padding-top: 20px;
   display: flex;
   justify-content: center;
 }
@@ -526,4 +513,106 @@ a.footer-menu:hover {
   .footer-content-right{
     display: none;
   }
+ 
+}
+
+
+
+@media only screen and (max-width: 877px) and (min-width: 375px ) {
+  iframe {
+    height: 350px;
+  }
+  .grammar {
+
+    height: 350px;
+    position: relative
+  }
+  .resources {
+    width:100%;
+    height: 350px;
+    position: relative
+  }
+
+  .book {
+
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+  }
+
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 877px) {
+  iframe{ 
+    height: 400px;
+  }
+
+  .grammar {
+    width:100%;
+    height: 450px;
+    position: relative
+  }
+  .book {
+    width:100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+  }
+  .resources {
+    width:100%;
+    height: 450px;
+    position: relative
+  }
+  
+}
+
+@media only screen and (min-width: 1024px) {
+.grammar {
+  width:100%;
+  height: 200px;
+  position: relative
+}
+.resources {
+  width:100%;
+  height: 200px;
+  position: relative
+}
+
+.book {
+  width:100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+}
+
+.grammar img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resources img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book img {
+  position: absolute;
+  width:100%;
+  object-fit: cover;
+  top: 0;
+  transform: translateY(0)
+}
+
+
+.column-div {
+  @apply grid grid-cols-1 gap-8 lg:grid-cols-3 gap-10
+}
+
+.main-div {
+  @apply container m-auto px-2 pt-10
 }

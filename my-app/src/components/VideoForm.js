@@ -1,5 +1,20 @@
 import React from "react";
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+function failureAlert() {
+  toast.warning("This resource already exists!", {
+    position: "bottom-center",
+    autoClose: 4000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: false,
+    progress: undefined,
+    theme: "light",
+  })
+}
 
 function VideoForm({ array, setArray }) {
   const initialFormValues = {
@@ -30,11 +45,11 @@ function VideoForm({ array, setArray }) {
     };
 
     const resourceExists = array.some(
-      (item) => item.link === formData.videoUrl
+      (item) => item.videoUrl === formData.videoUrl
     );
 
     if (resourceExists) {
-      alert("This video already exists!");
+      failureAlert();
     } else {
       fetch("http://localhost:3000/videos", {
         method: "POST",
@@ -86,6 +101,7 @@ function VideoForm({ array, setArray }) {
           <button type="submit">Add</button>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 }
