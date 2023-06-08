@@ -15,7 +15,7 @@ function failureAlert() {
     })
 }
 
-function OtherResourcesForm({ linksArray, setLinksArray }) {
+function OtherResourcesForm({ resourcesArray, setResourcesArray }) {
   const initialFormValues = {
     name: "",
     description: "",
@@ -45,7 +45,7 @@ function OtherResourcesForm({ linksArray, setLinksArray }) {
       likes: 0,
     };
 
-    const resourceExists = linksArray.some(
+    const resourceExists = resourcesArray.some(
       (item) => item.link === formData.link
     );
 
@@ -62,7 +62,7 @@ function OtherResourcesForm({ linksArray, setLinksArray }) {
         body: JSON.stringify(newLink),
       })
         .then((resp) => resp.json())
-        .then((newLink) => setLinksArray([newLink, ...linksArray]));
+        .then((newLink) => setResourcesArray([newLink, ...resourcesArray]));
     }
 
     setFormData(initialFormValues);

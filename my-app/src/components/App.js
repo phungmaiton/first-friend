@@ -9,13 +9,13 @@ import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import SearchSort from "./SearchSort";
+
 
 function App() {
   const [grammarArray, setGrammarArray] = useState([]);
   const [videoArray, setVideoArray] = useState([]);
   const [booksArray, setBooksArray] = useState([]);
-  const [linksArray, setLinksArray] = useState([]);
+  const [resourcesArray, setResourcesArray] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   const location = useLocation();
@@ -39,9 +39,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/other")
+    fetch("http://localhost:3000/resources")
       .then((resp) => resp.json())
-      .then((links) => setLinksArray(links));
+      .then((resources) => setResourcesArray(resources));
   }, []);
 
   return (
@@ -59,8 +59,8 @@ function App() {
               setGrammarArray={setGrammarArray}
               videoArray={videoArray}
               setVideoArray={setVideoArray}
-              linksArray={linksArray}
-              setLinksArray={setLinksArray}
+              resourcesArray={resourcesArray}
+              setResourcesArray={setResourcesArray}
             />
           }
         />
@@ -88,11 +88,11 @@ function App() {
           }
         />
         <Route
-          path="/other"
+          path="/resources"
           element={
             <OtherResourcesPage
-              linksArray={linksArray}
-              setLinksArray={setLinksArray}
+              resourcesArray={resourcesArray}
+              setResourcesArray={setResourcesArray}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
             ></OtherResourcesPage>

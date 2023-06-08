@@ -13,8 +13,11 @@ function Home({
   setVideoArray,
   booksArray,
   setBooksArray,
-  linksArray,
-  setLinksArray,
+
+  resourcesArray,
+  setResourcesArray
+
+
 }) {
   const topThreeGrammar = grammarArray
     .sort((a, b) => b.likes - a.likes)
@@ -28,7 +31,7 @@ function Home({
     .sort((a, b) => b.likes - a.likes)
     .slice(0, 3);
 
-  const topThreeResources = linksArray
+  const topThreeResources = resourcesArray
     .sort((a, b) => b.likes - a.likes)
     .slice(0, 3);
 
@@ -65,8 +68,8 @@ function Home({
         <div className="color-background-section">
           <PopularResources
             topThreeResources={topThreeResources}
-            linksArray={linksArray}
-            setLinksArray={setLinksArray}
+            resourcesArray={resourcesArray}
+            setResourcesArray={setResourcesArray}
           />
         </div>
       </div>

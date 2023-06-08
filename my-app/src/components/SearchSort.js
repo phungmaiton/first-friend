@@ -13,7 +13,7 @@ function SearchSort ({setSearchTerm}) {
                 onChange = {handleChange} 
                 type="text" 
                 className='searchTerm'
-                placeholder="Enter Name"/>
+                placeholder="Search..."/>
         </div>
     )
 }

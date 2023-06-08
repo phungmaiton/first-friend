@@ -17,7 +17,7 @@ function NavBar() {
         <NavLink to="/books">BOOKS</NavLink>
         <NavLink to="/grammar">GRAMMAR</NavLink>
         <NavLink to="/videos">VIDEOS</NavLink>
-        <NavLink to="/other">OTHER RESOURCES</NavLink>
+        <NavLink to="/resources">OTHER RESOURCES</NavLink>
       </div>
       {/* </div> */}
     </nav>
