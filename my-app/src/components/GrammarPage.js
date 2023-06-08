@@ -7,18 +7,21 @@ import GrammarForm from "./GrammarForm";
 import PageTransition from "./PageTransition";
 import SearchSort from "./SearchSort";
 
-function GrammarPage({ grammarArray, setGrammarArray, searchTerm, setSearchTerm }) {
+function GrammarPage({
+  grammarArray,
+  setGrammarArray,
+  searchTerm,
+  setSearchTerm,
+}) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = grammarArray.slice(indexOfFirstPost, indexOfLastPost);
 
-
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
   };
-
 
   const filteredItems = currentPosts.filter((grammar) => {
     return (
@@ -36,7 +39,7 @@ function GrammarPage({ grammarArray, setGrammarArray, searchTerm, setSearchTerm 
       />
 
       <div>
-        <SearchSort setSearchTerm={setSearchTerm}/>
+        <SearchSort setSearchTerm={setSearchTerm} />
       </div>
 
       {/* <div className="search container m-auto px-2 pt-10 pb-10">
@@ -67,7 +70,7 @@ function GrammarPage({ grammarArray, setGrammarArray, searchTerm, setSearchTerm 
         </div>
         <Pagination
           paginate={paginate}
-          array={filteredItems}
+          array={grammarArray}
           postsPerPage={postsPerPage}
         />
       </div>
