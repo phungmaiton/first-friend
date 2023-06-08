@@ -32,7 +32,7 @@ function OtherResourcesPage({ linksArray, setLinksArray }) {
     <PageTransition>
       <Banner
         pageTitle="Other Resources"
-        subTitle="Find Some Tips and Tricks"
+        subTitle="Find Some Resources"
         background="https://a.cdn-hotels.com/gdcs/production81/d60/e414d9a4-df1b-4e19-976f-b83e8a1b2c8d.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
       />
 
