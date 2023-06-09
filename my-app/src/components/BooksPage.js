@@ -7,7 +7,6 @@ import BookForm from "./BookForm";
 import PageTransition from "./PageTransition";
 import SearchSort from "./SearchSort";
 
-
 function BooksPage({
   booksArray,
   setBooksArray,
@@ -16,19 +15,16 @@ function BooksPage({
   sort,
   setSort,
 }) {
-
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = booksArray.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
   };
 
-
-  const filteredItems = currentPosts
+  const filteredItems = booksArray
     .filter((book) => {
       return (
         book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -46,7 +42,13 @@ function BooksPage({
         return a.id-b.id
     })
 
-
+  const currentPosts = () => {
+    if (searchTerm == "" && sort == "default") {
+      return booksArray.slice(indexOfFirstPost, indexOfLastPost);
+    } else {
+      return filteredItems.slice(indexOfFirstPost, indexOfLastPost);
+    }
+  };
   return (
     <PageTransition>
       <Banner
@@ -68,7 +70,7 @@ function BooksPage({
 
       <div className="container m-auto px-2 pb-20">
         <div className="column-div">
-          {filteredItems.map((book) => (
+          {currentPosts().map((book) => (
             <BookItem
               book={book}
               key={book.id}
@@ -85,7 +87,7 @@ function BooksPage({
         </div>
         <Pagination
           paginate={paginate}
-          array={booksArray}
+          array={filteredItems}
           postsPerPage={postsPerPage}
         />
       </div>

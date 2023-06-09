@@ -6,41 +6,47 @@ import OtherResourcesForm from "./OtherResourcesForm";
 import PageTransition from "./PageTransition";
 import SearchSort from "./SearchSort";
 
-function OtherResourcesPage({ 
-  resourcesArray, 
-  setResourcesArray, 
-  searchTerm, 
+function OtherResourcesPage({
+  resourcesArray,
+  setResourcesArray,
+  searchTerm,
   setSearchTerm,
   dropDown,
   setDropDown,
   sort,
-  setSort
+  setSort,
 }) {
-
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = resourcesArray.slice(indexOfFirstPost, indexOfLastPost);
-
-
 
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
   };
 
-  const filteredItems = currentPosts 
-  .filter((resource) => {
-    return (
-      resource.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      resource.description.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    
-  })
-  .sort((a, b) => {
-    if (sort === 'name') {
-      return a.name.localeCompare(b.name);
+  const filteredItems = resourcesArray
+    .filter((resource) => {
+      return (
+        resource.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        resource.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    })
+    .sort((a, b) => {
+      if (sort === "name") {
+        return a.name.localeCompare(b.name);
+      } else if (sort === "likes") {
+        return b.likes - a.likes;
+      }
+    });
+
+  const currentPosts = () => {
+    if (searchTerm == "" && sort == "default") {
+      return resourcesArray.slice(indexOfFirstPost, indexOfLastPost);
+    } else {
+      return filteredItems.slice(indexOfFirstPost, indexOfLastPost);
     }
+
     else if (sort === 'likes') {
       return b.likes - a.likes
     }
@@ -52,8 +58,8 @@ function OtherResourcesPage({
   //   if (sort === 'name') {
   //     return a.name.localeCompare(b.name);
   //   }
-    // else if (sort === 'likes')
-    //   return a.likes.localeCompare(b.likes)
+  // else if (sort === 'likes')
+  //   return a.likes.localeCompare(b.likes)
   // })
 
   return (
@@ -64,10 +70,10 @@ function OtherResourcesPage({
         background="https://a.cdn-hotels.com/gdcs/production81/d60/e414d9a4-df1b-4e19-976f-b83e8a1b2c8d.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
       />
       <div>
-        <SearchSort 
-          setSearchTerm={setSearchTerm} 
+        <SearchSort
+          setSearchTerm={setSearchTerm}
           dropDown={dropDown}
-          setDropDown= {setDropDown} 
+          setDropDown={setDropDown}
           filteredItems={filteredItems}
           setSort={setSort}
         />
@@ -91,7 +97,7 @@ function OtherResourcesPage({
 
       <div className="container m-auto px-2 pb-20">
         <div className="column-div">
-          {filteredItems.map((resource) => (
+          {currentPosts().map((resource) => (
             <OtherResourcesItem
               resource={resource}
               link={resource.link}
@@ -109,7 +115,7 @@ function OtherResourcesPage({
 
         <Pagination
           paginate={paginate}
-          array={resourcesArray}
+          array={filteredItems}
           postsPerPage={postsPerPage}
         />
       </div>

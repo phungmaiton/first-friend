@@ -13,38 +13,43 @@ function GrammarPage({
   searchTerm,
   setSearchTerm,
   sort,
-  setSort
+  setSort,
 }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = grammarArray.slice(indexOfFirstPost, indexOfLastPost);
-  
-
 
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
   };
 
-  const filteredItems = currentPosts 
-  .filter((grammar) => {
-    return (
-      grammar.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      grammar.description.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    
-  })
-  .sort((a, b) => {
-    if (sort === 'name') {
-      return a.name.localeCompare(b.name);
+  const filteredItems = grammarArray
+    .filter((grammar) => {
+      return (
+        grammar.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        grammar.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    })
+    .sort((a, b) => {
+      if (sort === "name") {
+        return a.name.localeCompare(b.name);
+      } else if (sort === "likes") {
+        return b.likes - a.likes;
+      }
+    });
+
+  const currentPosts = () => {
+    if (searchTerm == "" && sort == "default") {
+      return grammarArray.slice(indexOfFirstPost, indexOfLastPost);
+    } else {
+      return filteredItems.slice(indexOfFirstPost, indexOfLastPost);
     }
-    else if (sort === 'likes') {
-      return b.likes - a.likes
-    }
+
     else if (sort === 'id')
       return a.id-b.id
   })
+
 
   return (
     <PageTransition>
@@ -69,7 +74,7 @@ function GrammarPage({
 
       <div className="container m-auto px-2 pb-20">
         <div className="column-div">
-          {filteredItems.map((grammar) => (
+          {currentPosts().map((grammar) => (
             <GrammarItem
               grammar={grammar}
               key={grammar.id}
@@ -86,7 +91,7 @@ function GrammarPage({
         </div>
         <Pagination
           paginate={paginate}
-          array={grammarArray}
+          array={filteredItems}
           postsPerPage={postsPerPage}
         />
       </div>
