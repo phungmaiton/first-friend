@@ -73,6 +73,8 @@ function App() {
               searchTerm={searchTerm} 
               booksArray={booksArray} 
               setBooksArray={setBooksArray}
+              sort={sort}
+              setSort={setSort}
               
             />
           }
@@ -85,6 +87,8 @@ function App() {
               grammarArray={grammarArray}
               setGrammarArray={setGrammarArray}
               setSearchTerm={setSearchTerm}
+              sort={sort}
+              setSort={setSort}
             />
           }
         />
