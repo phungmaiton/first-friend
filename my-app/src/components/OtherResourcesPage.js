@@ -29,21 +29,33 @@ function OtherResourcesPage({
     setCurrentPage(selected + 1);
   };
 
-  const filteredItems = currentPosts.filter((resource) => {
+  const filteredItems = currentPosts 
+  .filter((resource) => {
     return (
       resource.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       resource.description.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  });
-
-
-  const sortedItems= filteredItems.sort((a, b) => {
+    
+  })
+  .sort((a, b) => {
     if (sort === 'name') {
       return a.name.localeCompare(b.name);
     }
+    else if (sort === 'likes') {
+      return b.likes - a.likes
+    }
+  })
+
+
+
+
+  // const sortedItems= filteredItems.sort((a, b) => {
+  //   if (sort === 'name') {
+  //     return a.name.localeCompare(b.name);
+  //   }
     // else if (sort === 'likes')
     //   return a.likes.localeCompare(b.likes)
-  })
+  // })
 
   return (
     <PageTransition>

@@ -12,6 +12,8 @@ function GrammarPage({
   setGrammarArray,
   searchTerm,
   setSearchTerm,
+  sort,
+  setSort
 }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
@@ -25,12 +27,22 @@ function GrammarPage({
     setCurrentPage(selected + 1);
   };
 
-  const filteredItems = currentPosts.filter((grammar) => {
+  const filteredItems = currentPosts 
+  .filter((resource) => {
     return (
-      grammar.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      grammar.description.toLowerCase().includes(searchTerm.toLowerCase())
+      resource.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      resource.description.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  });
+    
+  })
+  .sort((a, b) => {
+    if (sort === 'name') {
+      return a.name.localeCompare(b.name);
+    }
+    else if (sort === 'likes') {
+      return b.likes - a.likes
+    }
+  })
 
   return (
     <PageTransition>
@@ -41,7 +53,7 @@ function GrammarPage({
       />
 
       <div>
-        <SearchSort setSearchTerm={setSearchTerm} />
+        <SearchSort setSearchTerm={setSearchTerm} setSort={setSort} />
       </div>
 
       {/* <div className="search container m-auto px-2 pt-10 pb-10">

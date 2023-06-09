@@ -7,6 +7,7 @@ import BookForm from "./BookForm";
 import PageTransition from "./PageTransition";
 import SearchSort from "./SearchSort";
 
+
 function BooksPage({
   booksArray,
   setBooksArray,
@@ -15,6 +16,7 @@ function BooksPage({
   sort,
   setSort,
 }) {
+
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const indexOfLastPost = currentPage * postsPerPage;
@@ -24,6 +26,7 @@ function BooksPage({
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
   };
+
 
   const filteredItems = currentPosts
     .filter((book) => {
@@ -39,6 +42,7 @@ function BooksPage({
         return b.likes - a.likes;
       }
     });
+
 
   return (
     <PageTransition>
