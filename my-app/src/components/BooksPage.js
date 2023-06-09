@@ -7,7 +7,16 @@ import BookForm from "./BookForm";
 import PageTransition from "./PageTransition";
 import SearchSort from "./SearchSort";
 
-function BooksPage({ booksArray, setBooksArray, searchTerm, setSearchTerm, sort, setSort }) {
+
+function BooksPage({
+  booksArray,
+  setBooksArray,
+  searchTerm,
+  setSearchTerm,
+  sort,
+  setSort,
+}) {
+
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const indexOfLastPost = currentPage * postsPerPage;
@@ -18,22 +27,22 @@ function BooksPage({ booksArray, setBooksArray, searchTerm, setSearchTerm, sort,
     setCurrentPage(selected + 1);
   };
 
-  const filteredItems = currentPosts 
-  .filter((resource) => {
-    return (
-      resource.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      resource.description.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    
-  })
-  .sort((a, b) => {
-    if (sort === 'name') {
-      return a.name.localeCompare(b.name);
-    }
-    else if (sort === 'likes') {
-      return b.likes - a.likes
-    }
-  })
+
+  const filteredItems = currentPosts
+    .filter((book) => {
+      return (
+        book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        book.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    })
+    .sort((a, b) => {
+      if (sort === "name") {
+        return a.name.localeCompare(b.name);
+      } else if (sort === "likes") {
+        return b.likes - a.likes;
+      }
+    });
+
 
   return (
     <PageTransition>
