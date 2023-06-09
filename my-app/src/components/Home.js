@@ -5,6 +5,7 @@ import PopularVideos from "./PopularVideos";
 import PopularBooks from "./PopularBooks";
 import PopularResources from "./PopularResources";
 import PageTransition from "./PageTransition";
+import SearchSort from "./SearchSort";
 
 function Home({
   grammarArray,
@@ -74,6 +75,7 @@ function Home({
         </div>
       </div>
     </PageTransition>
+    
   );
 }
 

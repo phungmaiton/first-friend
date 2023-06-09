@@ -12,7 +12,9 @@ function OtherResourcesPage({
   searchTerm, 
   setSearchTerm,
   dropDown,
-  setDropDown
+  setDropDown,
+  sort,
+  setSort
 }) {
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,6 +22,7 @@ function OtherResourcesPage({
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = resourcesArray.slice(indexOfFirstPost, indexOfLastPost);
+
 
 
   const paginate = ({ selected }) => {
@@ -33,6 +36,15 @@ function OtherResourcesPage({
     );
   });
 
+
+  const sortedItems= filteredItems.sort((a, b) => {
+    if (sort === 'name') {
+      return a.name.localeCompare(b.name);
+    }
+    // else if (sort === 'likes')
+    //   return a.likes.localeCompare(b.likes)
+  })
+
   return (
     <PageTransition>
       <Banner
@@ -45,6 +57,8 @@ function OtherResourcesPage({
           setSearchTerm={setSearchTerm} 
           dropDown={dropDown}
           setDropDown= {setDropDown} 
+          filteredItems={filteredItems}
+          setSort={setSort}
         />
       </div>
       {/* 

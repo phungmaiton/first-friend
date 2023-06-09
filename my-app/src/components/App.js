@@ -10,14 +10,14 @@ import { AnimatePresence } from "framer-motion";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
-
 function App() {
   const [grammarArray, setGrammarArray] = useState([]);
   const [videoArray, setVideoArray] = useState([]);
   const [booksArray, setBooksArray] = useState([]);
   const [resourcesArray, setResourcesArray] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [dropDown, setDropDown] =useState([])
+  const [sort, setSort] = useState('default')
+  
 
   const location = useLocation();
 
@@ -68,7 +68,13 @@ function App() {
         <Route
           path="/books"
           element={
-            <BooksPage setSearchTerm={setSearchTerm} searchTerm={searchTerm} booksArray={booksArray} setBooksArray={setBooksArray} dropDown={dropDown} setDropDown= {setDropDown} />
+            <BooksPage 
+              setSearchTerm={setSearchTerm} 
+              searchTerm={searchTerm} 
+              booksArray={booksArray} 
+              setBooksArray={setBooksArray}
+              
+            />
           }
         />
         <Route
@@ -79,8 +85,6 @@ function App() {
               grammarArray={grammarArray}
               setGrammarArray={setGrammarArray}
               setSearchTerm={setSearchTerm}
-              dropDown={dropDown}
-              setDropDown= {setDropDown}
             />
           }
         />
@@ -98,9 +102,10 @@ function App() {
               setResourcesArray={setResourcesArray}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
-              dropDown={dropDown}
-              setDropDown= {setDropDown}
-            ></OtherResourcesPage>
+              sort={sort}
+              setSort={setSort}
+
+           />
           }
         />
       </Routes>
