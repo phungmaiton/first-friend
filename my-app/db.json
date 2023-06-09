@@ -224,6 +224,13 @@
       "likes": 0,
       "category": "listening",
       "id": 14
+    },
+    {
+      "name": "33 positive self-affirmations in Korean",
+      "videoUrl": "https://www.youtube.com/embed/LmEbrbmK4nA",
+      "likes": 0,
+      "category": "motivational",
+      "id": 15
     }
   ],
   "resources": [
@@ -284,13 +291,12 @@
       "likes": 1
     },
     {
-      "id": 8,
       "name": "Naver Papago",
       "description": "Naver Papago, shortened to Papago and stylized as papago, is a multilingual machine translation cloud service provided by Naver Corporation.",
       "image": "https://img.hani.co.kr/imgdb/resize/2017/0720/150044884517_20170720.JPG",
       "link": "https://papago.naver.com/",
-      "likes": 11
-      
+      "likes": 11,
+      "id": 8
     }
   ]
 }
