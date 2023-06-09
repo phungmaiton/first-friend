@@ -20,7 +20,7 @@ function SearchSort({ setSearchTerm, setSort }) {
       />
 
       <select onChange={handleSort} className="dropDown">
-        <option value="default" disabled>
+        <option value="default" disabled selected>
           Sort By
         </option>
         <option value="name">Name</option>
