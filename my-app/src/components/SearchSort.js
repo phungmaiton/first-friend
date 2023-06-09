@@ -1,4 +1,3 @@
-import { selectClasses } from "@mui/material";
 import React from "react";
 
 function SearchSort({ setSearchTerm, setSort }) {
