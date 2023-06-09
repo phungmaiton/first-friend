@@ -16,8 +16,7 @@ function App() {
   const [booksArray, setBooksArray] = useState([]);
   const [resourcesArray, setResourcesArray] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [sort, setSort] = useState('default')
-  
+  const [sort, setSort] = useState("default");
 
   const location = useLocation();
 
@@ -68,12 +67,13 @@ function App() {
         <Route
           path="/books"
           element={
-            <BooksPage 
-              setSearchTerm={setSearchTerm} 
-              searchTerm={searchTerm} 
-              booksArray={booksArray} 
+            <BooksPage
+              setSearchTerm={setSearchTerm}
+              searchTerm={searchTerm}
+              booksArray={booksArray}
               setBooksArray={setBooksArray}
-              
+              sort={sort}
+              setSort={setSort}
             />
           }
         />
@@ -104,8 +104,7 @@ function App() {
               setSearchTerm={setSearchTerm}
               sort={sort}
               setSort={setSort}
-
-           />
+            />
           }
         />
       </Routes>

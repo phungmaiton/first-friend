@@ -7,7 +7,14 @@ import BookForm from "./BookForm";
 import PageTransition from "./PageTransition";
 import SearchSort from "./SearchSort";
 
-function BooksPage({ booksArray, setBooksArray, searchTerm, setSearchTerm }) {
+function BooksPage({
+  booksArray,
+  setBooksArray,
+  searchTerm,
+  setSearchTerm,
+  sort,
+  setSort,
+}) {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
   const indexOfLastPost = currentPage * postsPerPage;
@@ -18,12 +25,20 @@ function BooksPage({ booksArray, setBooksArray, searchTerm, setSearchTerm }) {
     setCurrentPage(selected + 1);
   };
 
-  const filteredItems = currentPosts.filter((book) => {
-    return (
-      book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      book.description.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  });
+  const filteredItems = currentPosts
+    .filter((book) => {
+      return (
+        book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        book.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    })
+    .sort((a, b) => {
+      if (sort === "name") {
+        return a.name.localeCompare(b.name);
+      } else if (sort === "likes") {
+        return b.likes - a.likes;
+      }
+    });
 
   return (
     <PageTransition>
@@ -33,7 +48,7 @@ function BooksPage({ booksArray, setBooksArray, searchTerm, setSearchTerm }) {
         background="https://a.cdn-hotels.com/gdcs/production158/d375/8bd96051-345f-497d-90ae-caa8a2a14983.jpg?impolicy=fcrop&w=1600&h=1066&q=medium"
       />
       <div>
-        <SearchSort setSearchTerm={setSearchTerm} />
+        <SearchSort setSearchTerm={setSearchTerm} setSort={setSort} />
       </div>
       {/* <div className="search container m-auto px-2 pt-10 pb-10">
         <input

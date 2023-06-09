@@ -554,7 +554,12 @@ a.footer-menu:hover {
     position: relative;
     overflow: hidden;
   }
-
+  .dropDown {
+ 
+    width: 25%;
+   
+  }
+  
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 877px) {
@@ -578,7 +583,12 @@ a.footer-menu:hover {
     height: 450px;
     position: relative
   }
-  
+  .dropDown {
+ 
+  width: 20%;
+ 
+}
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -599,6 +609,14 @@ a.footer-menu:hover {
   position: relative;
   overflow: hidden;
 }
+
+.dropDown {
+ 
+  width: 20%;
+ 
+}
+
+
 }
 
 .grammar img {
