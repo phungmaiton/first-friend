@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import JSConfetti from 'js-confetti';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import JSConfetti from "js-confetti";
 
-const jsConfetti = new JSConfetti()
+const jsConfetti = new JSConfetti();
 
 function scrollToTop() {
   window.scrollTo(0, 395);
-};
+}
 
 function failureAlert() {
   toast.warning("This resource already exists!", {
@@ -20,7 +20,7 @@ function failureAlert() {
     draggable: false,
     progress: undefined,
     theme: "light",
-  })
+  });
 }
 
 function VideoForm({ array, setArray }) {
@@ -69,13 +69,11 @@ function VideoForm({ array, setArray }) {
       })
         .then((resp) => resp.json())
         .then((newVideo) => setArray([newVideo, ...array]));
-        jsConfetti.addConfetti({
-          confettiColors: [
-            "#D8766D", "#778AC6", "#E5E5E5",
-          ],
-        });
-        scrollToTop();
-    };
+      jsConfetti.addConfetti({
+        confettiColors: ["#D8766D", "#778AC6", "#E5E5E5"],
+      });
+      scrollToTop();
+    }
 
     setFormData(initialFormValues);
   };
