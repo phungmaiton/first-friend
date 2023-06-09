@@ -28,10 +28,10 @@ function GrammarPage({
   };
 
   const filteredItems = currentPosts 
-  .filter((resource) => {
+  .filter((grammar) => {
     return (
-      resource.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      resource.description.toLowerCase().includes(searchTerm.toLowerCase())
+      grammar.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      grammar.description.toLowerCase().includes(searchTerm.toLowerCase())
     );
     
   })
