@@ -1,17 +1,17 @@
-import React, {useState} from 'react'
-import Select from 'react-select'
+import { selectClasses } from '@mui/material';
+import React from 'react'
 
-function SearchSort ({setSearchTerm, dropDown, setDropDown}) {
 
+function SearchSort ({setSearchTerm, setSort}) {
+    
     function handleChange(e) {
     setSearchTerm(e.target.value);
   }
 
-    function handleFilter(e) {
-        setDropDown(e.target)
-    }
+  function handleSort(e) {
+    setSort(e.target.value)
+  }
 
-    // const [isSearchable, setIsSearchable] =useState(true)
 
     return (
         <div className="search container m-auto px-2 pt-10 pb-10">
@@ -21,16 +21,13 @@ function SearchSort ({setSearchTerm, dropDown, setDropDown}) {
                 className='searchTerm'
                 placeholder="Search..."/>
             
-            <Select 
-                onChange={handleFilter}
-                className='dropDown'
-                // isSearchable={isSearchable}
-                options={dropDown}
-                />
+            <select onChange={handleSort} className='dropDown'> 
+                <option value='default'>Sort By</option>
+                <option value='name'>Name</option>
+                <option value='likes'>Popularity</option>
+            </select>
         </div>
-      
 
-     
     )
 }
 

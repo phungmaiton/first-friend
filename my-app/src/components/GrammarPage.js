@@ -18,6 +18,8 @@ function GrammarPage({
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = grammarArray.slice(indexOfFirstPost, indexOfLastPost);
+  
+
 
   const paginate = ({ selected }) => {
     setCurrentPage(selected + 1);
