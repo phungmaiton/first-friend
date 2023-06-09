@@ -107,7 +107,7 @@ function VideoForm({ array, setArray }) {
             <option value="select" disabled>
               Select Category
             </option>
-            <option value="motivational">Motivational</option>
+            <option value="motivation">Motivational</option>
             <option value="listening">Listening Practice</option>
             <option value="entertainment">Entertainment</option>
           </select>
