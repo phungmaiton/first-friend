@@ -42,6 +42,8 @@ function GrammarPage({
     else if (sort === 'likes') {
       return b.likes - a.likes
     }
+    else if (sort === 'id')
+      return a.id-b.id
   })
 
   return (
