@@ -37,6 +37,8 @@ function OtherResourcesPage({
         return a.name.localeCompare(b.name);
       } else if (sort === "likes") {
         return b.likes - a.likes;
+      } else if (sort === "id") {
+        return a.id - b.id;
       }
     });
 
@@ -46,13 +48,7 @@ function OtherResourcesPage({
     } else {
       return filteredItems.slice(indexOfFirstPost, indexOfLastPost);
     }
-
-    else if (sort === 'likes') {
-      return b.likes - a.likes
-    }
-    else if (sort === 'id')
-      return a.id-b.id
-  })
+  };
 
   // const sortedItems= filteredItems.sort((a, b) => {
   //   if (sort === 'name') {

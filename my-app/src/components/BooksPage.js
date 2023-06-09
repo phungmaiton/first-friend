@@ -32,15 +32,12 @@ function BooksPage({
       );
     })
     .sort((a, b) => {
-      if (sort === 'name') {
+      if (sort === "name") {
         return a.name.localeCompare(b.name);
-      }
-      else if (sort === 'likes') {
-        return b.likes - a.likes
-      }
-      else if (sort === 'id')
-        return a.id-b.id
-    })
+      } else if (sort === "likes") {
+        return b.likes - a.likes;
+      } else if (sort === "id") return a.id - b.id;
+    });
 
   const currentPosts = () => {
     if (searchTerm == "" && sort == "default") {
