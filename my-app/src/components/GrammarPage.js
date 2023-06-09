@@ -45,7 +45,11 @@ function GrammarPage({
     } else {
       return filteredItems.slice(indexOfFirstPost, indexOfLastPost);
     }
-  };
+
+    else if (sort === 'id')
+      return a.id-b.id
+  })
+
 
   return (
     <PageTransition>
