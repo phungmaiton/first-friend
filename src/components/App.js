@@ -21,25 +21,25 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    fetch("https://your-first-friend.onrender.com/grammar")
+    fetch("http://localhost:3000/grammar")
       .then((resp) => resp.json())
       .then((grammar) => setGrammarArray(grammar));
   }, []);
 
   useEffect(() => {
-    fetch("https://your-first-friend.onrender.com/videos")
+    fetch("http://localhost:3000/videos")
       .then((resp) => resp.json())
       .then((videos) => setVideoArray(videos));
   }, []);
 
   useEffect(() => {
-    fetch("https://your-first-friend.onrender.com/books")
+    fetch("http://localhost:3000/books")
       .then((resp) => resp.json())
       .then((books) => setBooksArray(books));
   }, []);
 
   useEffect(() => {
-    fetch("https://your-first-friend.onrender.com/resources")
+    fetch("http://localhost:3000/resources")
       .then((resp) => resp.json())
       .then((resources) => setResourcesArray(resources));
   }, []);
