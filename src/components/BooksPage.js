@@ -36,7 +36,7 @@ function BooksPage({
         return a.name.localeCompare(b.name);
       } else if (sort === "likes") {
         return b.likes - a.likes;
-      } else if (sort === "id") return a.id - b.id;
+      }
     });
 
   const currentPosts = () => {

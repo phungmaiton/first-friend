@@ -24,7 +24,6 @@ function SearchSort({ setSearchTerm, setSort }) {
         </option>
         <option value="name">Name</option>
         <option value="likes">Popularity</option>
-        <option value="id">Reset</option>
       </select>
     </div>
   );
