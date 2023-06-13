@@ -189,6 +189,11 @@ code {
     justify-content: center;
     align-items: center;
   }
+
+  .menu.open {
+    display: flex;
+  }
+  
   #menu-toggle ~ .menu a {
     height: 0;
     margin: 0;
