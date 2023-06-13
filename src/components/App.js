@@ -17,31 +17,48 @@ function App() {
   const [resourcesArray, setResourcesArray] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [sort, setSort] = useState("default");
+  const [isLoading, setIsLoading] = useState(false);
 
   const location = useLocation();
 
   useEffect(() => {
+    setIsLoading(true);
     fetch("https://first-friend-data.onrender.com/grammar")
       .then((resp) => resp.json())
-      .then((grammar) => setGrammarArray(grammar));
+      .then((grammar) => {
+        setGrammarArray(grammar);
+        setIsLoading(false);
+      });
   }, []);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch("https://first-friend-data.onrender.com/videos")
       .then((resp) => resp.json())
-      .then((videos) => setVideoArray(videos));
+      .then((videos) => {
+        setVideoArray(videos);
+        setIsLoading(false);
+      });
   }, []);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch("https://first-friend-data.onrender.com/books")
       .then((resp) => resp.json())
-      .then((books) => setBooksArray(books));
+      .then((books) => {
+        setBooksArray(books);
+        setIsLoading(false);
+      });
   }, []);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch("https://first-friend-data.onrender.com/resources")
       .then((resp) => resp.json())
-      .then((resources) => setResourcesArray(resources));
+      .then((resources) => {
+        setResourcesArray(resources);
+        setIsLoading(false);
+      });
   }, []);
 
   return (
@@ -53,6 +70,7 @@ function App() {
           path="/first-friend/"
           element={
             <Home
+              isLoading={isLoading}
               booksArray={booksArray}
               setBooksArray={setBooksArray}
               grammarArray={grammarArray}

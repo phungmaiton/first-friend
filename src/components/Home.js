@@ -1,11 +1,12 @@
 import React from "react";
+import { CSSProperties } from "react";
 import Banner from "./Banner";
 import PopularGrammar from "./PopularGrammar";
 import PopularVideos from "./PopularVideos";
 import PopularBooks from "./PopularBooks";
 import PopularResources from "./PopularResources";
 import PageTransition from "./PageTransition";
-import SearchSort from "./SearchSort";
+import ClipLoader from "react-spinners/ClipLoader";
 
 function Home({
   grammarArray,
@@ -14,11 +15,9 @@ function Home({
   setVideoArray,
   booksArray,
   setBooksArray,
-
+  isLoading,
   resourcesArray,
-  setResourcesArray
-
-
+  setResourcesArray,
 }) {
   const topThreeGrammar = grammarArray
     .sort((a, b) => b.likes - a.likes)
@@ -49,6 +48,7 @@ function Home({
             topThreeBooks={topThreeBooks}
             booksArray={booksArray}
             setBooksArray={setBooksArray}
+            isLoading={isLoading}
           />
         </div>
         <div className="color-background-section">
@@ -56,6 +56,7 @@ function Home({
             topThreeGrammar={topThreeGrammar}
             grammarArray={grammarArray}
             setGrammarArray={setGrammarArray}
+            isLoading={isLoading}
           />
         </div>
         <div className="color-background-section">
@@ -63,6 +64,7 @@ function Home({
             topThreeVideos={topThreeVideos}
             videoArray={videoArray}
             setVideoArray={setVideoArray}
+            isLoading={isLoading}
           />
         </div>
 
@@ -71,11 +73,11 @@ function Home({
             topThreeResources={topThreeResources}
             resourcesArray={resourcesArray}
             setResourcesArray={setResourcesArray}
+            isLoading={isLoading}
           />
         </div>
       </div>
     </PageTransition>
-    
   );
 }
 
