@@ -16,7 +16,7 @@ function NavBar() {
 
   return (
     <nav className="topnav">
-      <NavLink to="/first-friend/">
+      <NavLink to="/">
         <img id="logo" src="./main-logo.png" alt="logo" />
       </NavLink>
       <input
@@ -29,19 +29,19 @@ function NavBar() {
         <div className="menu-button"></div>
       </label>
       <div className={`menu ${menuOpen ? "open" : ""}`}>
-        <NavLink to="/first-friend/" onClick={closeMenu}>
+        <NavLink to="/" onClick={closeMenu}>
           HOME
         </NavLink>
-        <NavLink to="/first-friend/books" onClick={closeMenu}>
+        <NavLink to="/books" onClick={closeMenu}>
           BOOKS
         </NavLink>
-        <NavLink to="/first-friend/grammar" onClick={closeMenu}>
+        <NavLink to="/grammar" onClick={closeMenu}>
           GRAMMAR
         </NavLink>
-        <NavLink to="/first-friend/videos" onClick={closeMenu}>
+        <NavLink to="/videos" onClick={closeMenu}>
           VIDEOS
         </NavLink>
-        <NavLink to="/first-friend/resources" onClick={closeMenu}>
+        <NavLink to="/resources" onClick={closeMenu}>
           OTHER RESOURCES
         </NavLink>
       </div>
