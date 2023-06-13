@@ -23,7 +23,7 @@ function VideoItem({
     const updateObj = {
       likes: updatedLikes,
     };
-    fetch(`http://localhost:3000/videos/${id}`, {
+    fetch(`https://first-friend-data.onrender.com/videos/${id}`, {
       method: "PATCH",
       headers: {
         Accept: "application/json",

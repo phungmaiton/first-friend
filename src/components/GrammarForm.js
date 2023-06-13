@@ -1,27 +1,27 @@
 import React from "react";
 import { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import JSConfetti from 'js-confetti';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import JSConfetti from "js-confetti";
 
-const jsConfetti = new JSConfetti()
+const jsConfetti = new JSConfetti();
 
 function scrollToTop() {
   window.scrollTo(0, 395);
-};
+}
 
 function failureAlert() {
-    toast.warning("This resource already exists!", {
-      position: "bottom-center",
-      autoClose: 4000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: false,
-      progress: undefined,
-      theme: "light",
-    })
-};
+  toast.warning("This resource already exists!", {
+    position: "bottom-center",
+    autoClose: 4000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: false,
+    progress: undefined,
+    theme: "light",
+  });
+}
 
 function GrammarForm({ array, setArray }) {
   const initialFormValues = {
@@ -58,7 +58,7 @@ function GrammarForm({ array, setArray }) {
     if (resourceExists) {
       failureAlert();
     } else {
-      fetch("http://localhost:3000/grammar", {
+      fetch("https://first-friend-data.onrender.com/grammar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -69,13 +69,11 @@ function GrammarForm({ array, setArray }) {
       })
         .then((resp) => resp.json())
         .then((newGrammar) => setArray([newGrammar, ...array]));
-        jsConfetti.addConfetti({
-          confettiColors: [
-            "#D8766D", "#778AC6", "#E5E5E5",
-          ],
-        });
-        scrollToTop();
-    };
+      jsConfetti.addConfetti({
+        confettiColors: ["#D8766D", "#778AC6", "#E5E5E5"],
+      });
+      scrollToTop();
+    }
 
     setFormData(initialFormValues);
   };

@@ -58,7 +58,7 @@ function VideoForm({ array, setArray }) {
     if (resourceExists) {
       failureAlert();
     } else {
-      fetch("http://localhost:3000/videos", {
+      fetch("https://first-friend-data.onrender.com/videos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

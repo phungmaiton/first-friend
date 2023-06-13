@@ -1,25 +1,25 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import JSConfetti from 'js-confetti';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import JSConfetti from "js-confetti";
 
-const jsConfetti = new JSConfetti()
+const jsConfetti = new JSConfetti();
 
 function scrollToTop() {
   window.scrollTo(0, 395);
-};
+}
 
 function failureAlert() {
-    toast.warning("This resource already exists!", {
-      position: "bottom-center",
-      autoClose: 4000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: false,
-      progress: undefined,
-      theme: "light",
-    })
+  toast.warning("This resource already exists!", {
+    position: "bottom-center",
+    autoClose: 4000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: false,
+    progress: undefined,
+    theme: "light",
+  });
 }
 
 function OtherResourcesForm({ resourcesArray, setResourcesArray }) {
@@ -59,7 +59,7 @@ function OtherResourcesForm({ resourcesArray, setResourcesArray }) {
     if (resourceExists) {
       failureAlert();
     } else {
-      fetch("http://localhost:3000/resources", {
+      fetch("https://first-friend-data.onrender.com/resources", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -69,14 +69,14 @@ function OtherResourcesForm({ resourcesArray, setResourcesArray }) {
         body: JSON.stringify(newResource),
       })
         .then((resp) => resp.json())
-        .then((newResource) => setResourcesArray([newResource, ...resourcesArray]));
-        jsConfetti.addConfetti({
-          confettiColors: [
-            "#D8766D", "#778AC6", "#E5E5E5",
-          ],
-        });
-        scrollToTop();
-    };
+        .then((newResource) =>
+          setResourcesArray([newResource, ...resourcesArray])
+        );
+      jsConfetti.addConfetti({
+        confettiColors: ["#D8766D", "#778AC6", "#E5E5E5"],
+      });
+      scrollToTop();
+    }
 
     setFormData(initialFormValues);
   };

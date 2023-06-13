@@ -28,7 +28,7 @@ function GrammarItem({
     const updateObj = {
       likes: updatedLikes,
     };
-    fetch(`http://localhost:3000/grammar/${id}`, {
+    fetch(`https://first-friend-data.onrender.com/grammar/${id}`, {
       method: "PATCH",
       headers: {
         Accept: "application/json",

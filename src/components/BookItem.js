@@ -28,7 +28,7 @@ function BookItem({
     const updateObj = {
       likes: updatedLikes,
     };
-    fetch(`http://localhost:3000/books/${id}`, {
+    fetch(`https://first-friend-data.onrender.com/books/${id}`, {
       method: "PATCH",
       headers: {
         Accept: "application/json",

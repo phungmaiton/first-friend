@@ -26,7 +26,7 @@ function OtherResourcesItem({
     const updateObj = {
       likes: updatedLikes,
     };
-    fetch(`http://localhost:3000/resources/${id}`, {
+    fetch(`https://first-friend-data.onrender.com/resources/${id}`, {
       method: "PATCH",
       headers: {
         Accept: "application/json",
@@ -37,7 +37,7 @@ function OtherResourcesItem({
       .then((resp) => resp.json())
       .then((updatedResources) => {
         const newResourcesArray = resourcesArray.map((resource) =>
-        resource.id === id ? updatedResources : resource
+          resource.id === id ? updatedResources : resource
         );
         setResourcesArray(newResourcesArray);
       });
