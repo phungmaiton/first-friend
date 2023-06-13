@@ -193,7 +193,7 @@ code {
   .menu.open {
     display: flex;
   }
-  
+
   #menu-toggle ~ .menu a {
     height: 0;
     margin: 0;
@@ -533,12 +533,14 @@ a.footer-menu:hover {
   .footer-content-right{
     display: none;
   }
+
+}
+
+@media only screen and (max-width: 1180) {
   .banner{
     background-attachment: local ;
 }
 }
-
-
 
 @media only screen and (max-width: 877px) and (min-width: 375px ) {
   iframe {
