@@ -50,7 +50,7 @@ function App() {
       <AnimatePresence initial={false} />
       <Routes location={location} key={location.pathname}>
         <Route
-          path="/"
+          path="/first-friend/"
           element={
             <Home
               booksArray={booksArray}
@@ -65,7 +65,7 @@ function App() {
           }
         />
         <Route
-          path="/books"
+          path="/first-friend/books"
           element={
             <BooksPage
               setSearchTerm={setSearchTerm}
@@ -78,7 +78,7 @@ function App() {
           }
         />
         <Route
-          path="/grammar"
+          path="/first-friend/grammar"
           element={
             <GrammarPage
               searchTerm={searchTerm}
@@ -91,13 +91,13 @@ function App() {
           }
         />
         <Route
-          path="/videos"
+          path="/first-friend/videos"
           element={
             <VideoPage videoArray={videoArray} setVideoArray={setVideoArray} />
           }
         />
         <Route
-          path="/resources"
+          path="/first-friend/resources"
           element={
             <OtherResourcesPage
               resourcesArray={resourcesArray}

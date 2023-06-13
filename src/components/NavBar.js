@@ -14,11 +14,11 @@ function NavBar() {
         <div className="menu-button"></div>
       </label>
       <div className="menu">
-        <NavLink to="/">HOME</NavLink>
-        <NavLink to="/books">BOOKS</NavLink>
-        <NavLink to="/grammar">GRAMMAR</NavLink>
-        <NavLink to="/videos">VIDEOS</NavLink>
-        <NavLink to="/resources">OTHER RESOURCES</NavLink>
+        <NavLink to="/first-friend/">HOME</NavLink>
+        <NavLink to="/first-friend/books">BOOKS</NavLink>
+        <NavLink to="/first-friend/grammar">GRAMMAR</NavLink>
+        <NavLink to="/first-friend/videos">VIDEOS</NavLink>
+        <NavLink to="/first-friend/resources">OTHER RESOURCES</NavLink>
       </div>
       {/* </div> */}
     </nav>
