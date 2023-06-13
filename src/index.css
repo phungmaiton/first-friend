@@ -528,7 +528,9 @@ a.footer-menu:hover {
   .footer-content-right{
     display: none;
   }
- 
+  .banner{
+    background-attachment: local ;
+}
 }
 
 
