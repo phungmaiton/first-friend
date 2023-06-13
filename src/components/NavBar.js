@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <nav className="topnav">
       {/* <div className="container m-auto px-2"> */}
-      <NavLink to="/">
+      <NavLink to="/first-friend">
         <img id="logo" src="./main-logo.png" alt="logo" />
       </NavLink>
       <input id="menu-toggle" type="checkbox" />
