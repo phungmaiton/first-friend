@@ -1,12 +1,12 @@
 import React from "react";
-import { CSSProperties } from "react";
+
 import Banner from "./Banner";
 import PopularGrammar from "./PopularGrammar";
 import PopularVideos from "./PopularVideos";
 import PopularBooks from "./PopularBooks";
 import PopularResources from "./PopularResources";
 import PageTransition from "./PageTransition";
-import ClipLoader from "react-spinners/ClipLoader";
+
 
 function Home({
   grammarArray,
